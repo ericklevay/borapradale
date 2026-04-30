@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<template id="__bundler_thumbnail" data-bg-color="#08090F">
+<svg viewBox="0 0 80 56" xmlns="http://www.w3.org/2000/svg">
+  <rect width="80" height="56" fill="#08090F"/>
+  <text x="40" y="36" font-family="sans-serif" font-weight="900" font-size="28" fill="url(#g)" text-anchor="middle">DALE</text>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F5C418"/><stop offset="100%" stop-color="#3A78BE"/></linearGradient></defs>
+</svg>
+</template>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DALE — Nova Temporada · 08 Mai 2026 · Olinda</title>
+<meta name="description" content="DALE Nova Temporada — 08 de Maio de 2026. A festa de música latina em Olinda. DJ Incidental + Kizombaleiros. AMP213, Rua do Amparo.">
+<style>
+@font-face{font-family:'GothamBlack';src:url('../fonts/Gotham-Black.otf')format('opentype');font-weight:900}
+@font-face{font-family:'GothamNarrow';src:url('../fonts/Gotham-Narrow-Bold.otf')format('opentype');font-weight:700}
+@font-face{font-family:'GothamNarrow';src:url('../fonts/Gotham-Narrow-Book.otf')format('opentype');font-weight:400}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --night:#08090F;--navy:#1A2A4A;--navy-mid:#253A5E;
+  --gold:#F5C418;--amber:#E88C10;--orange:#E8550A;
+  --blue:#3A78BE;--purple:#4A2070;--cream:#F5EDD5;
+  --muted:#9BA8BC;--dim:#556070;
+  --grad-logo:linear-gradient(180deg,#F5C418 0%,#E88C10 30%,#3A78BE 70%,#1A2A4A 100%);
+  --grad-fire:linear-gradient(135deg,#E8550A 0%,#F5C418 60%);
+  --ease-bounce:cubic-bezier(0.34,1.56,0.64,1);
+}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--cream);font-family:'GothamNarrow',sans-serif;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;transition:background .3s}
+nav.scrolled{background:rgba(8,9,15,.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(245,196,24,.12)}
+.nav-logo{display:flex;align-items:center;text-decoration:none;}.nav-logo img{height:38px;object-fit:contain;filter:drop-shadow(1px 1px 0 var(--navy))}
+.nav-actions{display:flex;gap:10px;align-items:center}
+.nav-ig{display:flex;align-items:center;gap:6px;color:var(--muted);font-family:'GothamNarrow',sans-serif;font-weight:700;font-size:11px;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;transition:color .2s}
+.nav-ig:hover{color:var(--gold)}
+.nav-btn{font-family:'GothamBlack',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--orange);color:#fff;padding:9px 18px;text-decoration:none;border:none;transition:background .2s,color .2s;white-space:nowrap}
+.nav-btn:hover{background:var(--gold);color:var(--night)}
+
+/* ── HERO ── */
+#hero{position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;padding:80px 20px 0;text-align:center}
+.hero-bg{position:absolute;inset:0;background-image:url('../assets/illustration-dj-vinyl.png');background-size:cover;background-position:center top;opacity:.28;filter:saturate(1.3)}
+.hero-overlay{position:absolute;inset:0;background:radial-gradient(ellipse 90% 70% at 50% 0%,rgba(74,32,112,.75) 0%,rgba(8,9,15,.9) 65%)}
+.hero-fade{position:absolute;bottom:0;left:0;right:0;height:40%;background:linear-gradient(to top,var(--night) 0%,transparent 100%)}
+.hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:0}
+.hero-eyebrow{font-family:'GothamNarrow',sans-serif;font-weight:700;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;opacity:0;animation:fadeUp .8s .2s var(--ease-bounce) forwards}
+.hero-wordmark{font-family:'GothamBlack',sans-serif;font-size:clamp(88px,28vw,200px);line-height:.88;letter-spacing:-.03em;text-transform:uppercase;background:var(--grad-logo);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(4px 4px 0 var(--navy));opacity:0;animation:fadeUp .8s .35s var(--ease-bounce) forwards}
+.hero-tagline{font-family:'GothamBlack',sans-serif;font-size:clamp(18px,5vw,36px);text-transform:uppercase;letter-spacing:.04em;color:var(--cream);margin-top:8px;opacity:0;animation:fadeUp .8s .5s var(--ease-bounce) forwards}
+.hero-date{margin-top:20px;background:rgba(245,196,24,.1);border:1px solid rgba(245,196,24,.35);padding:8px 20px;font-family:'GothamNarrow',sans-serif;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--cream);opacity:0;animation:fadeUp .8s .65s var(--ease-bounce) forwards}
+
+/* Countdown */
+.countdown{display:flex;gap:12px;margin-top:24px;justify-content:center;opacity:0;animation:fadeUp .8s .8s var(--ease-bounce) forwards}
+.cd-unit{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:56px}
+.cd-num{font-family:'GothamBlack',sans-serif;font-size:clamp(28px,8vw,52px);line-height:1;color:var(--gold);text-shadow:0 0 20px rgba(245,196,24,.4)}
+.cd-label{font-family:'GothamNarrow',sans-serif;font-weight:700;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+.cd-sep{font-family:'GothamBlack',sans-serif;font-size:28px;color:var(--orange);align-self:center;line-height:1;margin-bottom:12px}
+
+.hero-ctas{display:flex;flex-direction:column;gap:10px;margin-top:28px;width:100%;max-width:340px;opacity:0;animation:fadeUp .8s .95s var(--ease-bounce) forwards}
+.btn-primary{font-family:'GothamBlack',sans-serif;font-size:14px;letter-spacing:.12em;text-transform:uppercase;background:var(--orange);color:#fff;padding:16px 32px;text-decoration:none;text-align:center;display:block;box-shadow:0 0 32px rgba(232,85,10,.45);transition:all .2s}
+.btn-primary:hover{background:var(--gold);color:var(--night);box-shadow:0 0 32px rgba(245,196,24,.5);transform:scale(1.02)}
+.btn-outline{font-family:'GothamBlack',sans-serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase;background:transparent;color:var(--gold);padding:14px 32px;border:2px solid var(--gold);text-decoration:none;text-align:center;display:block;transition:all .2s}
+.btn-outline:hover{background:var(--gold);color:var(--night)}
+.hero-shot{margin-top:14px;color:var(--gold);font-family:'GothamNarrow',sans-serif;font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:0;animation:fadeUp .8s 1.1s ease forwards;margin-bottom:48px}
+
+/* Scroll arrow */
+.scroll-arrow{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);color:var(--dim);font-size:18px;animation:bounce 2s ease-in-out infinite}
+
+/* ── MARQUEE ── */
+.marquee-band{background:var(--gold);padding:10px 0;overflow:hidden}
+.marquee-track{display:flex;gap:0;animation:marquee 20s linear infinite;width:max-content;will-change:transform}
+.marquee-item{font-family:'GothamBlack',sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--night);padding:0 32px;white-space:nowrap}
+.marquee-dot{color:var(--orange);padding:0 4px}
+
+/* ── SECTIONS ── */
+section{padding:72px 20px}
+.section-inner{max-width:640px;margin:0 auto}
+.section-label{font-family:'GothamNarrow',sans-serif;font-weight:700;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--dim);margin-bottom:8px}
+.section-title{font-family:'GothamBlack',sans-serif;font-size:clamp(28px,7vw,48px);text-transform:uppercase;letter-spacing:-.01em;line-height:.95;color:var(--gold);margin-bottom:24px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ── SOBRE ── */
+#sobre{background:var(--night)}
+.sobre-text{font-size:17px;line-height:1.75;color:var(--cream);margin-bottom:20px;font-weight:400}
+.sobre-text strong{color:var(--gold);font-weight:700}
+.highlights{display:flex;flex-direction:column;gap:10px;margin-top:28px}
+.highlight-item{display:flex;gap:14px;align-items:flex-start;background:rgba(26,42,74,.5);border-left:2px solid var(--orange);padding:14px 16px}
+.hi-icon{color:var(--orange);font-weight:900;font-family:'GothamBlack',sans-serif;font-size:16px;flex-shrink:0;margin-top:1px}
+.hi-text{font-size:14px;line-height:1.55;color:var(--cream)}
+.hi-text strong{color:var(--gold)}
+
+/* ── PROGRAMAÇÃO ── */
+#programacao{background:#0A0B14;border-top:1px solid var(--navy)}
+.timeline{display:flex;flex-direction:column;gap:0;margin-top:8px}
+.tl-item{display:flex;gap:20px;padding:18px 0;border-bottom:1px solid rgba(37,58,94,.5)}
+.tl-item:last-child{border-bottom:none}
+.tl-time{font-family:'GothamBlack',sans-serif;font-size:17px;color:var(--gold);min-width:52px;flex-shrink:0;letter-spacing:-.01em}
+.tl-content{}
+.tl-name{font-family:'GothamNarrow',sans-serif;font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.05em;color:var(--cream)}
+.tl-desc{font-size:13px;color:var(--muted);margin-top:3px;line-height:1.5}
+.tl-badge{display:inline-block;background:var(--orange);color:#fff;font-family:'GothamNarrow',sans-serif;font-weight:700;font-size:9px;letter-spacing:.15em;text-transform:uppercase;padding:2px 8px;margin-top:6px}
+
+/* ── LINEUP ── */
+#lineup{background:var(--night);background-image:radial-gradient(ellipse 100% 50% at 50% 0%,rgba(74,32,112,.35) 0%,transparent 70%)}
+.artist-cards{display:flex;flex-direction:column;gap:16px;margin-top:8px}
+.artist-card{background:var(--navy);border:1px solid var(--navy-mid);overflow:hidden}
+.ac-img{height:200px;background-size:cover;background-position:center;position:relative;filter:saturate(1.1)}
+.ac-img-fade{position:absolute;bottom:0;left:0;right:0;height:60%;background:linear-gradient(to top,var(--navy) 0%,transparent 100%)}
+.ac-body{padding:20px 20px 24px}
+.ac-role{font-family:'GothamNarrow',sans-serif;font-weight:700;font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--orange);margin-bottom:6px}
+.ac-name{font-family:'GothamBlack',sans-serif;font-size:28px;text-transform:uppercase;color:var(--gold);line-height:1}
+.ac-desc{font-size:14px;color:var(--muted);margin-top:10px;line-height:1.65}
+.ac-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.ac-tag{background:#253A5E;color:var(--cream);font-family:'GothamNarrow',sans-serif;font-weight:700;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px}
+
+/* ── INGRESSOS ── */
+#ingressos{background:#0A0B14;border-top:1px solid var(--navy)}
+.ticket-grid{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.ticket-card{background:var(--navy);border:1px solid var(--navy-mid);padding:20px;display:flex;justify-content:space-between;align-items:center;gap:12px;transition:border-color .2s,transform .2s}
+.ticket-card:hover{border-color:var(--gold);transform:translateX(4px)}
+.ticket-card.featured{border-color:var(--orange);border-top:2px solid var(--orange);position:relative}
+.tc-badge{position:absolute;top:-1px;right:16px;background:var(--orange);color:#fff;font-family:'GothamNarrow',sans-serif;font-weight:700;font-size:9px;letter-spacing:.15em;text-transform:uppercase;padding:3px 10px}
+.tc-name{font-family:'GothamBlack',sans-serif;font-size:17px;text-transform:uppercase;color:var(--cream);line-height:1}
+.tc-desc{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5}
+.tc-price{text-align:right;flex-shrink:0}
+.tc-val{font-family:'GothamBlack',sans-serif;font-size:22px;color:var(--gold);line-height:1;white-space:nowrap}
+.tc-pix{font-size:10px;color:var(--orange);font-family:'GothamNarrow',sans-serif;font-weight:700;letter-spacing:.05em;margin-top:2px}
+
+.ingressos-note{margin-top:20px;background:rgba(245,196,24,.06);border:1px solid rgba(245,196,24,.2);padding:16px;font-size:13px;color:var(--muted);line-height:1.6}
+.ingressos-note strong{color:var(--gold)}
+
+.buy-btns{display:flex;flex-direction:column;gap:10px;margin-top:24px}
+.btn-sympla{font-family:'GothamBlack',sans-serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase;background:var(--orange);color:#fff;padding:16px;text-decoration:none;text-align:center;display:block;box-shadow:0 0 24px rgba(232,85,10,.35);transition:all .2s}
+.btn-sympla:hover{background:var(--gold);color:var(--night)}
+.btn-pix{font-family:'GothamBlack',sans-serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase;background:transparent;color:var(--gold);padding:14px;border:2px solid var(--gold);text-decoration:none;text-align:center;display:block;transition:all .2s}
+.btn-pix:hover{background:var(--gold);color:var(--night)}
+
+/* ── GALERIA ── */
+#galeria{background:var(--night);padding-bottom:0}
+.gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:20px}
+.gallery-item{aspect-ratio:1;overflow:hidden;position:relative;cursor:pointer}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:saturate(.9)}
+.gallery-item:hover img{transform:scale(1.06);filter:saturate(1.3)}
+.gallery-item.wide{grid-column:1 / -1;aspect-ratio:16/7}
+
+/* Lightbox */
+#lightbox{position:fixed;inset:0;z-index:500;background:rgba(8,9,15,.95);display:none;align-items:center;justify-content:center;padding:20px}
+#lightbox.open{display:flex}
+#lightbox img{max-width:100%;max-height:90vh;object-fit:contain}
+#lb-close{position:absolute;top:20px;right:20px;background:none;border:none;color:var(--cream);font-size:28px;cursor:pointer;font-family:'GothamBlack',sans-serif}
+
+/* ── LOCALIZAÇÃO ── */
+#localizacao{background:#0A0B14;border-top:1px solid var(--navy)}
+.map-wrap{margin-top:20px;border:1px solid var(--navy-mid);overflow:hidden;position:relative}
+.map-wrap iframe{display:block;width:100%;height:280px;filter:saturate(.5) contrast(1.1) brightness(.85)}
+.loc-info{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.loc-item{display:flex;gap:12px;align-items:flex-start}
+.loc-icon{color:var(--gold);font-family:'GothamBlack',sans-serif;font-size:13px;flex-shrink:0;min-width:20px;margin-top:1px}
+.loc-text{font-size:14px;color:var(--cream);line-height:1.55}
+.loc-text a{color:var(--gold);text-decoration:none}
+.loc-text a:hover{text-decoration:underline}
+
+/* ── FAQ ── */
+#faq{background:var(--night);border-top:1px solid var(--navy)}
+.faq-list{margin-top:8px;display:flex;flex-direction:column;gap:2px}
+.faq-item{background:var(--navy);border:1px solid var(--navy-mid)}
+.faq-q{width:100%;background:none;border:none;color:var(--cream);font-family:'GothamNarrow',sans-serif;font-weight:700;font-size:14px;text-align:left;padding:16px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;transition:color .2s;letter-spacing:.01em}
+.faq-q:hover{color:var(--gold)}
+.faq-q.open{color:var(--gold)}
+.faq-arrow{font-size:14px;transition:transform .3s;flex-shrink:0;color:var(--orange)}
+.faq-q.open .faq-arrow{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease}
+.faq-a.open{max-height:300px}
+.faq-a-inner{padding:0 18px 16px;font-size:14px;color:var(--muted);line-height:1.7}
+.faq-a-inner a{color:var(--gold);text-decoration:none}
+.faq-a-inner a:hover{text-decoration:underline}
+
+/* ── FOOTER ── */
+footer{background:#06070D;border-top:1px solid var(--navy);padding:48px 20px 80px;text-align:center}
+.footer-wm{font-family:'GothamBlack',sans-serif;font-size:52px;letter-spacing:-.02em;text-transform:uppercase;background:var(--grad-logo);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(3px 3px 0 var(--navy))}
+.footer-sub{font-family:'GothamNarrow',sans-serif;font-weight:700;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-top:4px}
+.footer-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.footer-links a{font-family:'GothamNarrow',sans-serif;font-weight:700;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--cream);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--gold)}
+.footer-copy{margin-top:20px;font-size:11px;color:var(--dim);letter-spacing:.05em}
+
+/* ── FLOATING WHATSAPP ── */
+.wa-fab{position:fixed;bottom:24px;right:20px;z-index:300;display:flex;align-items:center;gap:10px;background:#25D366;padding:12px 18px 12px 14px;box-shadow:0 4px 20px rgba(0,0,0,.4);text-decoration:none;transition:transform .2s,box-shadow .2s;animation:fabIn .8s 1.5s var(--ease-bounce) both}
+.wa-fab:hover{transform:scale(1.05);box-shadow:0 8px 28px rgba(37,211,102,.4)}
+.wa-icon{width:22px;height:22px;fill:#fff}
+.wa-label{font-family:'GothamBlack',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#fff}
+
+/* ── KEYFRAMES ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes fabIn{from{opacity:0;transform:scale(.5) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 24px rgba(245,196,24,.3)}50%{box-shadow:0 0 40px rgba(245,196,24,.6)}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="#" class="nav-logo"><img src="../assets/logo-dale-color.png" alt="DALE"></a>
+  <div class="nav-actions">
+    <a href="https://instagram.com/borapradale" target="_blank" rel="noreferrer" class="nav-ig">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      @borapradale
+    </a>
+    <a href="#ingressos" class="nav-btn">Ingressos</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg" style="background-image:url('../assets/dj-incidental.jpg')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-fade"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Música da América Latina · 08 de Maio · Olinda</div>
+    <img src="../assets/DALE-TOP-BANNER.jpg" alt="DALE" style="width:min(90vw,600px);object-fit:contain;filter:drop-shadow(0 4px 24px rgba(0,0,0,.5))">
+    <div class="hero-tagline">Bora pra Dale!</div>
+    <div class="hero-date">Nova Temporada · AMP213 · Rua do Amparo, Olinda — PE</div>
+    <div class="countdown" id="countdown">
+      <div class="cd-unit"><span class="cd-num" id="cd-d">00</span><span class="cd-label">Dias</span></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-unit"><span class="cd-num" id="cd-h">00</span><span class="cd-label">Horas</span></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-unit"><span class="cd-num" id="cd-m">00</span><span class="cd-label">Min</span></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-unit"><span class="cd-num" id="cd-s">00</span><span class="cd-label">Seg</span></div>
+    </div>
+    <div class="hero-ctas">
+      <a href="#ingressos" class="btn-primary">COMPRAR INGRESSO</a>
+      <a href="#sobre" class="btn-outline">SAIBA MAIS</a>
+    </div>
+    <div class="hero-shot">★ Ingresso inclui 1 DALE SHOT cortesia até 21h ★</div>
+  </div>
+  <div class="scroll-arrow">↓</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-band" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">DALE</span><span class="marquee-item"><span class="marquee-dot">★</span> Salsa</span><span class="marquee-item"><span class="marquee-dot">★</span> Cumbia</span><span class="marquee-item"><span class="marquee-dot">★</span> Reggaeton</span><span class="marquee-item"><span class="marquee-dot">★</span> Bachata</span><span class="marquee-item"><span class="marquee-dot">★</span> Lambada</span><span class="marquee-item"><span class="marquee-dot">★</span> Forró</span><span class="marquee-item"><span class="marquee-dot">★</span> 08 Mai 2026</span>
+    <span class="marquee-item">DALE</span><span class="marquee-item"><span class="marquee-dot">★</span> Salsa</span><span class="marquee-item"><span class="marquee-dot">★</span> Cumbia</span><span class="marquee-item"><span class="marquee-dot">★</span> Reggaeton</span><span class="marquee-item"><span class="marquee-dot">★</span> Bachata</span><span class="marquee-item"><span class="marquee-dot">★</span> Lambada</span><span class="marquee-item"><span class="marquee-dot">★</span> Forró</span><span class="marquee-item"><span class="marquee-dot">★</span> 08 Mai 2026</span>
+  </div>
+</div>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">Sobre a Festa</div>
+      <h2 class="section-title">A pista é só alegria</h2>
+    </div>
+    <p class="sobre-text reveal">
+      O <strong>DALE</strong> é a festa de música latina que tomou conta de Olinda. Numa das ruas mais charmosas do Brasil, o <strong>AMP213</strong> abre as portas para uma noite de Salsa, Cumbia, Bachata, Reggaeton, Lambada e Forró — curada com amor pelo <strong>DJ Incidental</strong>.
+    </p>
+    <p class="sobre-text reveal">
+      Nunca dançou? Sem problema. Os <strong>Kizombaleiros</strong> são dois casais de professores incríveis que vão te colocar na pista em minutos. Acredite: em pouco tempo você já está no corpo de baile da festa.
+    </p>
+    <div class="highlights reveal">
+      <div class="highlight-item">
+        <div class="hi-icon">→</div>
+        <div class="hi-text"><strong>Salão de dança apropriado com 100m²</strong> — piso aprovado por profissionais de dança.</div>
+      </div>
+      <div class="highlight-item">
+        <div class="hi-icon">→</div>
+        <div class="hi-text"><strong>DALE Shot cortesia</strong> incluso no ingresso para quem chegar até 21h.</div>
+      </div>
+      <div class="highlight-item">
+        <div class="hi-icon">→</div>
+        <div class="hi-text"><strong>Comida vegana no cardápio.</strong> Todo mundo bem-vindo.</div>
+      </div>
+      <div class="highlight-item">
+        <div class="hi-icon">→</div>
+        <div class="hi-text"><strong>Ambiente seguro.</strong> Convidar pra dançar é ótimo. Insistir depois do não, não.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMAÇÃO -->
+<section id="programacao">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">08 de Maio de 2026</div>
+      <h2 class="section-title">Programação</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-time">19h</div>
+        <div class="tl-content">
+          <div class="tl-name">Abertura da Casa</div>
+          <div class="tl-desc">Portas abertas. Pegue seu drink de boas-vindas e explore o espaço.</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-time">19h30</div>
+        <div class="tl-content">
+          <div class="tl-name">Dale Shot Cortesia</div>
+          <div class="tl-desc">Quem chegou cedo aproveita — drink exclusivo incluso no ingresso até 21h.</div>
+          <div class="tl-badge">Incluso no ingresso</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-time">20h</div>
+        <div class="tl-content">
+          <div class="tl-name">Pista Aberta · DJ Incidental</div>
+          <div class="tl-desc">O DJ assume a cabine. Salsa, Cumbia, Reggaeton, Bachata, Lambada, Forró pé de serra.</div>
+          <div class="tl-badge">Pista aberta</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-time">20h30</div>
+        <div class="tl-content">
+          <div class="tl-name">Aulas com os Kizombaleiros</div>
+          <div class="tl-desc">Dois casais de professores na pista. Iniciantes, é a sua hora. Veteranos, venham aprender algo novo.</div>
+          <div class="tl-badge">Incluso no ingresso</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-time">22h+</div>
+        <div class="tl-content">
+          <div class="tl-name">A Festa Continua</div>
+          <div class="tl-desc">Só alegria até encerrar. A pista é toda sua.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LINEUP -->
+<section id="lineup">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">Atrações</div>
+      <h2 class="section-title">Quem vai tocar</h2>
+    </div>
+    <div class="artist-cards">
+      <div class="artist-card reveal">
+        <div class="ac-img" style="background-image:url('../assets/dj-incidental.jpg');background-position:center top">
+          <div class="ac-img-fade"></div>
+        </div>
+        <div class="ac-body">
+          <div class="ac-role">Residente · 15 anos de experiência</div>
+          <div class="ac-name">DJ Incidental</div>
+          <p class="ac-desc">Especialista em música latina há mais de 15 anos. Conduz o baile com autoridade e amor. Dizem que ele já acorda dançando — e a gente acredita.</p>
+          <div class="ac-tags">
+            <span class="ac-tag">Salsa</span>
+            <span class="ac-tag">Cumbia</span>
+            <span class="ac-tag">Bachata</span>
+            <span class="ac-tag">Reggaeton</span>
+            <span class="ac-tag">Forró</span>
+            <span class="ac-tag">Brega</span>
+          </div>
+        </div>
+      </div>
+      <div class="artist-card reveal">
+        <div class="ac-img" style="background-image:url('../assets/foto-salao-danca.jpg');background-position:center center">
+          <div class="ac-img-fade"></div>
+        </div>
+        <div class="ac-body">
+          <div class="ac-role">Professores · Dois casais</div>
+          <div class="ac-name">Kizombaleiros</div>
+          <p class="ac-desc">Dois casais de professores maravilhosos que vão te colocar no corpo de baile em poucos minutos. Venha sem medo — iniciantes são muito bem-vindos.</p>
+          <div class="ac-tags">
+            <span class="ac-tag">Aulas na Pista</span>
+            <span class="ac-tag">Para Iniciantes</span>
+            <span class="ac-tag">Dança de Salão</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INGRESSOS -->
+<section id="ingressos">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">Garanta seu lugar</div>
+      <h2 class="section-title">Ingressos</h2>
+    </div>
+    <div class="ticket-grid reveal">
+      <div class="ticket-card">
+        <div>
+          <div class="tc-name">Abre Alas</div>
+          <div class="tc-desc">Ingresso individual · Primeiro lote</div>
+        </div>
+        <div class="tc-price">
+          <div class="tc-val">R$ 30</div>
+          <div class="tc-pix">PIX s/ taxas</div>
+        </div>
+      </div>
+      <div class="ticket-card">
+        <div>
+          <div class="tc-name">Lote 2</div>
+          <div class="tc-desc">Ingresso individual · Segundo lote</div>
+        </div>
+        <div class="tc-price">
+          <div class="tc-val">R$ 40</div>
+          <div class="tc-pix">PIX s/ taxas</div>
+        </div>
+      </div>
+      <div class="ticket-card featured">
+        <div class="tc-badge">Mais popular</div>
+        <div>
+          <div class="tc-name">Dale Casal / Date</div>
+          <div class="tc-desc">Para dois — ideal pra vir acompanhado</div>
+        </div>
+        <div class="tc-price">
+          <div class="tc-val">R$ 50</div>
+          <div class="tc-pix">PIX s/ taxas</div>
+        </div>
+      </div>
+      <div class="ticket-card">
+        <div>
+          <div class="tc-name">Dale Mãe Solo</div>
+          <div class="tc-desc">Toda mãe solo merece dançar. Com carinho.</div>
+        </div>
+        <div class="tc-price">
+          <div class="tc-val">R$ 30</div>
+          <div class="tc-pix">PIX s/ taxas</div>
+        </div>
+      </div>
+      <div class="ticket-card">
+        <div>
+          <div class="tc-name">Mesa (4 pessoas)</div>
+          <div class="tc-desc">Reserve sua mesa com 4 ingressos inclusos</div>
+        </div>
+        <div class="tc-price">
+          <div class="tc-val">R$ 200</div>
+          <div class="tc-pix">PIX s/ taxas</div>
+        </div>
+      </div>
+    </div>
+    <div class="ingressos-note reveal">
+      <strong>PIX sem taxas:</strong> Compre direto pelo WhatsApp e pague no PIX sem taxas de plataforma. Ou compre online via Sympla (acréscimo de taxa de serviço).
+    </div>
+    <div class="buy-btns reveal">
+      <a href="https://sympla.com.br" target="_blank" rel="noreferrer" class="btn-sympla">Comprar no Sympla</a>
+      <a href="https://wa.me/5581989713537?text=Oi!%20Quero%20comprar%20ingresso%20para%20o%20DALE%20Nova%20Temporada" target="_blank" rel="noreferrer" class="btn-pix">PIX sem taxas · WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria" style="padding-bottom:3px">
+  <div class="section-inner" style="max-width:100%">
+    <div style="max-width:640px;margin:0 auto 20px;padding:0 20px">
+      <div class="reveal">
+        <div class="section-label">Rua do Amparo, 213</div>
+        <h2 class="section-title">Local</h2>
+      </div>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLb(this)">
+        <img src="../assets/foto-amp213-fachada.jpg" alt="Fachada AMP213" loading="lazy">
+      </div>
+      <div class="gallery-item" onclick="openLb(this)">
+        <img src="../assets/foto-amp213-jardim.jpg" alt="AMP213 jardim" loading="lazy">
+      </div>
+      <div class="gallery-item" onclick="openLb(this)">
+        <img src="../assets/foto-amp213-bar.jpg" alt="Bar AMP213" loading="lazy">
+      </div>
+      <div class="gallery-item" onclick="openLb(this)">
+        <img src="../assets/foto-amp213-drink.jpg" alt="Drinks AMP213" loading="lazy">
+      </div>
+      <div class="gallery-item wide" onclick="openLb(this)">
+        <img src="../assets/foto-amp213-salao.jpg" alt="Salão AMP213" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <button id="lb-close" onclick="closeLb()">✕</button>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<!-- LOCALIZAÇÃO -->
+<section id="localizacao">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">Como chegar</div>
+      <h2 class="section-title">Localização</h2>
+    </div>
+    <div class="map-wrap reveal">
+      <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-34.857%2C-8.015%2C-34.851%2C-8.009&amp;layer=mapnik&amp;marker=-8.0120,-34.8540"
+        title="AMP213 — Rua do Amparo, Olinda"
+        loading="lazy"
+        referrerpolicy="no-referrer">
+      </iframe>
+    </div>
+    <div class="loc-info reveal">
+      <div class="loc-item">
+        <div class="loc-icon">▲</div>
+        <div class="loc-text"><strong>AMP213</strong> — Rua do Amparo, 213, Olinda — PE<br>Uma das ruas mais charmosas do Brasil</div>
+      </div>
+      <div class="loc-item">
+        <div class="loc-icon">◉</div>
+        <div class="loc-text">Estacionamento nas ruas ao redor.<br>Recomendamos <strong>carro de aplicativo</strong> para facilitar.</div>
+      </div>
+      <div class="loc-item">
+        <div class="loc-icon">◎</div>
+        <div class="loc-text">
+          <a href="https://maps.google.com/?q=Rua+do+Amparo+213+Olinda+PE" target="_blank" rel="noreferrer">Abrir no Google Maps →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">Dúvidas</div>
+      <h2 class="section-title">FAQ</h2>
+    </div>
+    <div class="faq-list reveal">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Preciso saber dançar para ir? <span class="faq-arrow">↓</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Não! Os Kizombaleiros, dois casais de professores incríveis, vão te ensinar na pista. Em poucos minutos você já vai estar dançando. Promessa.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Como funciona o Dale Shot cortesia? <span class="faq-arrow">↓</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Todo ingresso inclui um Dale Shot exclusivo. Para garantir o seu, chegue antes das 21h e resgate na entrada ou no bar.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Como comprar pelo PIX sem taxas? <span class="faq-arrow">↓</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Fale pelo WhatsApp: <a href="https://wa.me/5581989713537" target="_blank" rel="noreferrer">81 98971-3537</a>. Combine o tipo de ingresso, pague no PIX e receba a confirmação.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Tem opção vegana? <span class="faq-arrow">↓</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Sim! O AMP213 tem opções veganas no cardápio de comes e bebes.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Qual o dress code? <span class="faq-arrow">↓</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Venha como quiser — o importante é que você se sinta bem para dançar. Só pedimos conforto nos pés se for pra ficar na pista!</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">O evento é acessível? <span class="faq-arrow">↓</span></button>
+        <div class="faq-a"><div class="faq-a-inner">O AMP213 fica na Rua do Amparo, uma rua histórica de paralelepípedos. Entre em contato pelo <a href="https://wa.me/5581989713537" target="_blank" rel="noreferrer">WhatsApp</a> para informações sobre acessibilidade.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Sigo quem nas redes? <span class="faq-arrow">↓</span></button>
+        <div class="faq-a"><div class="faq-a-inner">A festa: <a href="https://instagram.com/borapradale" target="_blank" rel="noreferrer">@borapradale</a> · O espaço: <a href="https://instagram.com/amp.213" target="_blank" rel="noreferrer">@amp.213</a></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="../assets/logo-dale-color.png" alt="DALE" style="height:80px;object-fit:contain;filter:drop-shadow(3px 3px 0 var(--navy))">
+  <div class="footer-links">
+    <a href="https://instagram.com/borapradale" target="_blank" rel="noreferrer">@borapradale</a>
+    <a href="https://instagram.com/amp.213" target="_blank" rel="noreferrer">@amp.213</a>
+    <a href="https://wa.me/5581989713537" target="_blank" rel="noreferrer">WhatsApp</a>
+    <a href="#ingressos">Ingressos</a>
+    <a href="https://sympla.com.br" target="_blank" rel="noreferrer">Sympla</a>
+  </div>
+  <div class="footer-copy">AMP213 · Rua do Amparo 213 · Olinda, PE · 08 Mai 2026</div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/5581989713537?text=Oi!%20Quero%20saber%20mais%20sobre%20o%20DALE%20Nova%20Temporada" target="_blank" rel="noreferrer" class="wa-fab" aria-label="Fale no WhatsApp">
+  <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.570-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.555 4.122 1.528 5.856L.057 23.899a.75.75 0 0 0 .919.919l6.043-1.471A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.655-.497-5.187-1.369l-.371-.214-3.588.874.893-3.494-.228-.371A9.974 9.974 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+  </svg>
+  <span class="wa-label">WhatsApp</span>
+</a>
+
+<script>
+// ── Countdown ──
+(function countdown(){
+  const target = new Date('2026-05-08T19:00:00-03:00');
+  function tick(){
+    const diff = target - Date.now();
+    if(diff <= 0){ document.getElementById('countdown').innerHTML='<div style="font-family:GothamBlack,sans-serif;font-size:22px;color:var(--gold);letter-spacing:.05em">A FESTA COMEÇOU!</div>'; return; }
+    const d=Math.floor(diff/864e5), h=Math.floor((diff%864e5)/36e5), m=Math.floor((diff%36e5)/6e4), s=Math.floor((diff%6e4)/1e3);
+    document.getElementById('cd-d').textContent=String(d).padStart(2,'0');
+    document.getElementById('cd-h').textContent=String(h).padStart(2,'0');
+    document.getElementById('cd-m').textContent=String(m).padStart(2,'0');
+    document.getElementById('cd-s').textContent=String(s).padStart(2,'0');
+  }
+  tick(); setInterval(tick,1000);
+})();
+
+// ── Scroll reveals ──
+(function(){
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+})();
+
+// ── Nav scroll ──
+(function(){
+  const nav=document.getElementById('main-nav');
+  window.addEventListener('scroll',()=>{ nav.classList.toggle('scrolled',window.scrollY>60); },{passive:true});
+})();
+
+// ── FAQ accordion ──
+function toggleFaq(btn){
+  const item=btn.closest('.faq-item');
+  const ans=item.querySelector('.faq-a');
+  const isOpen=btn.classList.contains('open');
+  document.querySelectorAll('.faq-q.open').forEach(b=>{ b.classList.remove('open'); b.closest('.faq-item').querySelector('.faq-a').classList.remove('open'); });
+  if(!isOpen){ btn.classList.add('open'); ans.classList.add('open'); }
+}
+
+// ── Lightbox ──
+function openLb(el){
+  const img=el.querySelector('img');
+  document.getElementById('lb-img').src=img.src;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLb(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.getElementById('lightbox').addEventListener('click',function(e){ if(e.target===this)closeLb(); });
+document.addEventListener('keydown',function(e){ if(e.key==='Escape')closeLb(); });
+</script>
+
+</body>
+</html>

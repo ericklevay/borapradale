@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://borapradale.com.br/sitemap.xml

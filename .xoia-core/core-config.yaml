@@ -1,0 +1,13 @@
+project:
+  name: cd "/Users/ericklevay/Projetos com IA/borapradale"
+  type: greenfield
+  installedAt: '2026-07-03T14:03:21.591Z'
+  version: 1.0.0
+techStack: xoia-decide
+integrations: []
+ide:
+  selected:
+    - claude-code
+slashPrefix: XOIA
+devStoryLocation: docs/stories
+language: portuguese

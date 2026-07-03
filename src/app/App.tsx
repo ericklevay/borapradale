@@ -60,12 +60,7 @@ function Nav() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <span
-          className="text-2xl font-black tracking-wider text-[#F2CB53]"
-          style={{ fontFamily: DISPLAY }}
-        >
-          DALE
-        </span>
+        <img src="/img/logo-dale-aura.png" alt="DALE" width={1517} height={769} className="h-10 w-auto object-contain" />
         <div
           className="hidden md:flex items-center gap-8 text-xs font-semibold text-white/60 tracking-[0.2em]"
           style={{ fontFamily: BODY }}
@@ -104,7 +99,7 @@ function Hero() {
         className="absolute inset-0 bg-cover bg-center bg-[#0C0D1E]"
         style={{
           backgroundImage:
-            "url(https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=1600&h=1000&fit=crop&auto=format)",
+            "url(/img/hero.jpg)",
         }}
       />
       {/* Overlays */}
@@ -126,16 +121,13 @@ function Hero() {
         >
           BORA PRA
         </p>
-        <h1
-          className="font-black leading-none text-white"
-          style={{
-            fontFamily: DISPLAY,
-            fontSize: "clamp(7rem, 22vw, 22rem)",
-            letterSpacing: "-0.02em",
-          }}
-        >
-          DALE
-        </h1>
+        <img
+          src="/img/top-banner-aura.jpg"
+          alt="DALE Aura"
+          width={1400}
+          height={733}
+          className="w-full max-w-3xl mx-auto h-auto"
+        />
 
         {/* Date line */}
         <div
@@ -216,11 +208,7 @@ function Marquee() {
     "Salsa",
     "Cumbia",
     "Reggaeton",
-    "Merengue",
     "Bachata",
-    "Mambo",
-    "Dembow",
-    "Champeta",
   ];
   const all = [...genres, ...genres, ...genres];
   return (
@@ -265,8 +253,8 @@ function Sobre() {
     },
     {
       icon: <Leaf className="w-5 h-5" />,
-      title: "Comida Vegana",
-      desc: "Opções gastronômicas sem proteína animal",
+      title: "Comes e Bebes",
+      desc: "Estrutura completa de alimentação e bar",
     },
     {
       icon: <Shield className="w-5 h-5" />,
@@ -430,8 +418,11 @@ function Lineup() {
           {/* DJ Incidental */}
           <div className="relative overflow-hidden group bg-[#13153A]">
             <img
-              src="https://images.unsplash.com/photo-1545959570-a94084071b5d?w=800&h=520&fit=crop&auto=format"
+              src="/img/dj-incidental.jpg"
               alt="DJ Incidental no palco"
+              width={1200}
+              height={800}
+              loading="lazy"
               className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-600"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0C0D1E] via-[#0C0D1E]/30 to-transparent" />
@@ -459,8 +450,11 @@ function Lineup() {
           {/* Corpo de Baile */}
           <div className="relative overflow-hidden group bg-[#13153A]">
             <img
-              src="https://images.unsplash.com/photo-1754684223558-2cd0e4b518ed?w=800&h=520&fit=crop&auto=format"
+              src="/img/corpo-de-baile.jpg"
               alt="Casal do Corpo de Baile dançando"
+              width={1200}
+              height={800}
+              loading="lazy"
               className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-600"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0C0D1E] via-[#0C0D1E]/30 to-transparent" />
@@ -512,7 +506,7 @@ function VideoSection() {
           className="text-white/35 text-center text-sm mb-14"
           style={{ fontFamily: F }}
         >
-          Registro da edição anterior — o que esperar da pista
+          Registro de edições anteriores — o que esperar da pista
         </p>
 
         <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -689,19 +683,6 @@ function Tickets() {
               >
                 {t.price}
               </div>
-              <a
-                href="https://www.sympla.com.br"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`mt-5 block text-center py-3 text-xs font-black tracking-[0.2em] transition-colors ${
-                  t.featured
-                    ? "bg-[#F2CB53] text-[#0C0D1E] hover:bg-white"
-                    : "border border-white/20 text-white hover:border-white/50"
-                }`}
-                style={{ fontFamily: DISPLAY }}
-              >
-                COMPRAR
-              </a>
             </div>
           ))}
         </div>
@@ -712,6 +693,27 @@ function Tickets() {
         >
           PIX disponível via WhatsApp · Sujeito a disponibilidade
         </p>
+
+        <div className="flex flex-col gap-4 mt-6">
+          <a
+            href="https://www.sympla.com.br/evento/dale-fuego-sexta-05-de-junho-amp-213-olinda-rua-do-amparo-213/3438745"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-center bg-[#2EC420] text-white px-8 py-4 text-sm font-black tracking-[0.15em] uppercase hover:brightness-110 transition-all shadow-lg shadow-[#2EC420]/30"
+            style={{ fontFamily: DISPLAY }}
+          >
+            Comprar no Sympla
+          </a>
+          <a
+            href="https://wa.me/5581989713537?text=Oi!%20Quero%20comprar%20ingresso%20no%20PIX%20sem%20taxas%20para%20o%20DALE"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 border-2 border-[#F2CB53] text-[#F2CB53] px-8 py-4 text-sm font-black tracking-[0.15em] uppercase hover:bg-[#F2CB53] hover:text-[#0C0D1E] transition-colors"
+            style={{ fontFamily: DISPLAY }}
+          >
+            Pix sem taxas · WhatsApp
+          </a>
+        </div>
       </div>
     </section>
   );
@@ -774,9 +776,12 @@ function Venue() {
         </div>
         <div className="relative">
           <img
-            src="https://images.unsplash.com/photo-1454190358526-f809c8b16d98?w=800&h=560&fit=crop&auto=format"
+            src="/img/fachada-amp.jpg"
             alt="AMP213 — Olinda"
-            className="w-full h-[360px] object-cover"
+            width={798}
+            height={1200}
+            loading="lazy"
+            className="w-full aspect-[2/3] object-cover"
           />
           <div className="absolute inset-0 ring-1 ring-inset ring-[#393A84]/40" />
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0C0D1E]/70 to-transparent h-24" />
@@ -790,29 +795,74 @@ function Venue() {
 function Gallery() {
   const photos = [
     {
-      url: "https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=600&h=400&fit=crop&auto=format",
+      url: "/img/galeria-1.jpg",
       alt: "Galera na pista de dança",
       tall: false,
+      w: 1200,
+      h: 800,
     },
     {
-      url: "https://images.unsplash.com/photo-1545959570-a94084071b5d?w=600&h=800&fit=crop&auto=format",
-      alt: "Dançarinos no palco",
+      url: "/img/galeria-2.jpg",
+      alt: "Amigas dançando",
       tall: true,
+      w: 1200,
+      h: 800,
     },
     {
-      url: "https://images.unsplash.com/photo-1562686686-10bff25dd2dd?w=600&h=400&fit=crop&auto=format",
-      alt: "Fotografia da noite",
+      url: "/img/galeria-3.jpg",
+      alt: "Bar do AMP213",
       tall: false,
+      w: 1200,
+      h: 800,
     },
     {
-      url: "https://images.unsplash.com/photo-1582585439585-99889854a00c?w=600&h=400&fit=crop&auto=format",
-      alt: "Pista de dança cheia",
+      url: "/img/galeria-4.jpg",
+      alt: "Casal dançando salsa",
       tall: false,
+      w: 1200,
+      h: 800,
     },
     {
-      url: "https://images.unsplash.com/photo-1754684223558-2cd0e4b518ed?w=600&h=400&fit=crop&auto=format",
-      alt: "Casal dançando",
+      url: "/img/galeria-5.jpg",
+      alt: "Galera comemorando",
       tall: false,
+      w: 1200,
+      h: 838,
+    },
+    {
+      url: "/img/galeria-6.jpg",
+      alt: "Quintal Secreto do AMP213",
+      tall: false,
+      w: 900,
+      h: 1200,
+    },
+    {
+      url: "/img/galeria-7.jpg",
+      alt: "Drink no AMP213",
+      tall: true,
+      w: 1200,
+      h: 798,
+    },
+    {
+      url: "/img/galeria-8.jpg",
+      alt: "Salão de dança do AMP213",
+      tall: false,
+      w: 960,
+      h: 764,
+    },
+    {
+      url: "/img/galeria-9.jpg",
+      alt: "DALE - edição anterior",
+      tall: false,
+      w: 1200,
+      h: 800,
+    },
+    {
+      url: "/img/galeria-10.jpg",
+      alt: "DALE - edição anterior",
+      tall: false,
+      w: 1200,
+      h: 800,
     },
   ];
   return (
@@ -839,6 +889,9 @@ function Gallery() {
               <img
                 src={p.url}
                 alt={p.alt}
+                width={p.w}
+                height={p.h}
+                loading="lazy"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               />
             </div>
@@ -944,12 +997,7 @@ function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
-            <div
-              className="text-4xl font-black text-[#F2CB53] mb-1"
-              style={{ fontFamily: DISPLAY }}
-            >
-              DALE
-            </div>
+            <img src="/img/logo-dale-aura.png" alt="DALE" width={1517} height={769} loading="lazy" className="h-16 w-auto object-contain mx-auto md:mx-0 mb-1" />
             <p
               className="text-white/35 text-sm"
               style={{ fontFamily: BODY }}
@@ -1018,10 +1066,10 @@ export default function App() {
       <Nav />
       <Hero />
       <Marquee />
+      <VideoSection />
       <Sobre />
       <Schedule />
       <Lineup />
-      <VideoSection />
       <Tickets />
       <Venue />
       <Gallery />

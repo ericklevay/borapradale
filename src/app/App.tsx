@@ -121,6 +121,9 @@ function Hero() {
         >
           BORA PRA
         </p>
+        <h1 className="sr-only">
+          DALE Aura — Festa de Música Latina em Olinda, 17 de Julho de 2026
+        </h1>
         <img
           src="/img/top-banner-aura.jpg"
           alt="DALE Aura"
@@ -170,9 +173,7 @@ function Hero() {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="https://www.sympla.com.br"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#ingressos"
             className="bg-[#F2CB53] text-[#0C0D1E] px-10 py-4 text-base font-black tracking-[0.2em] hover:bg-white transition-colors w-full sm:w-auto text-center"
             style={{ fontFamily: DISPLAY }}
           >
@@ -475,7 +476,7 @@ function Lineup() {
                 className="text-white/55 text-sm mt-2"
                 style={{ fontFamily: BODY }}
               >
-                Dois casais de instrutores pra te colocar na pista sem medo.
+                Presença de dançarinos profissionais pra te colocar na pista sem medo.
               </p>
             </div>
           </div>
@@ -524,7 +525,7 @@ function VideoSection() {
             <div className="relative rounded-[2rem] overflow-hidden border-2 border-[#393A84]/60 shadow-2xl shadow-[#393A84]/30 bg-[#0C0D1E]">
               <div className="aspect-[9/16]">
                 <iframe
-                  src="https://www.youtube.com/embed/d_mzKQkg8V8?rel=0&modestbranding=1&playsinline=1"
+                  src="https://www.youtube.com/embed/IkJJu9CePAg?rel=0&modestbranding=1&playsinline=1"
                   title="DALE — vídeo da festa"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -561,7 +562,7 @@ function VideoSection() {
                 COMPRAR INGRESSO
               </a>
               <a
-                href="https://www.youtube.com/shorts/d_mzKQkg8V8"
+                href="https://www.youtube.com/shorts/IkJJu9CePAg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-white/20 text-white/70 px-8 py-4 text-sm font-semibold hover:border-white/50 hover:text-white transition-colors text-center inline-flex items-center justify-center gap-2"
@@ -696,7 +697,7 @@ function Tickets() {
 
         <div className="flex flex-col gap-4 mt-6">
           <a
-            href="https://www.sympla.com.br/evento/dale-fuego-sexta-05-de-junho-amp-213-olinda-rua-do-amparo-213/3438745"
+            href="https://www.sympla.com.br/evento/dale-aura---sexta---17-de-julho---amp-213---olinda-rua-do-amparo-213/3489579"
             target="_blank"
             rel="noopener noreferrer"
             className="block text-center bg-[#2EC420] text-white px-8 py-4 text-sm font-black tracking-[0.15em] uppercase hover:brightness-110 transition-all shadow-lg shadow-[#2EC420]/30"
@@ -723,16 +724,30 @@ function Tickets() {
 function Venue() {
   return (
     <section id="local" className="py-28 px-6">
+      <div className="max-w-6xl mx-auto md:hidden">
+        <p
+          className="text-[#418BB0] text-xs font-semibold tracking-[0.35em] mb-5"
+          style={{ fontFamily: BODY }}
+        >
+          ONDE VAI SER
+        </p>
+        <h2
+          className="text-5xl font-black text-white leading-none mb-7"
+          style={{ fontFamily: DISPLAY }}
+        >
+          AMP<span className="text-[#F2CB53]">213</span>
+        </h2>
+      </div>
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-        <div>
+        <div className="order-2 md:order-none">
           <p
-            className="text-[#418BB0] text-xs font-semibold tracking-[0.35em] mb-5"
+            className="hidden md:block text-[#418BB0] text-xs font-semibold tracking-[0.35em] mb-5"
             style={{ fontFamily: BODY }}
           >
             ONDE VAI SER
           </p>
           <h2
-            className="text-5xl md:text-7xl font-black text-white leading-none mb-7"
+            className="hidden md:block text-5xl md:text-7xl font-black text-white leading-none mb-7"
             style={{ fontFamily: DISPLAY }}
           >
             AMP<span className="text-[#F2CB53]">213</span>
@@ -760,8 +775,20 @@ function Venue() {
                 className="text-white/65 text-sm"
                 style={{ fontFamily: BODY }}
               >
-                Quinta-feira, 17 de julho · Abertura às 19h
+                Sexta-feira, 17 de julho · Abertura às 19h
               </span>
+            </div>
+            <div className="flex items-start gap-3">
+              <MessageCircle className="text-[#25D366] w-4 h-4 mt-0.5 shrink-0" />
+              <a
+                href="https://wa.me/5581989713537"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/65 text-sm hover:text-white transition-colors"
+                style={{ fontFamily: BODY }}
+              >
+                WhatsApp: 81 98971-3537
+              </a>
             </div>
           </div>
           <a
@@ -774,7 +801,7 @@ function Venue() {
             Ver no Google Maps <ExternalLink className="w-4 h-4" />
           </a>
         </div>
-        <div className="relative">
+        <div className="relative order-1 md:order-none">
           <img
             src="/img/fachada-amp.jpg"
             alt="AMP213 — Olinda"
@@ -786,6 +813,32 @@ function Venue() {
           <div className="absolute inset-0 ring-1 ring-inset ring-[#393A84]/40" />
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0C0D1E]/70 to-transparent h-24" />
         </div>
+      </div>
+      <div className="max-w-6xl mx-auto mt-10">
+        <a
+          href="https://maps.google.com/?q=Rua+do+Amparo+213+Olinda+PE"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block relative border border-[#393A84]/40 overflow-hidden"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d487.9!2d-34.85400!3d-8.01200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18a7aba9d3f5%3A0x5b1e2a5ecf2dcf21!2sRua%20do%20Amparo%2C%20213%20-%20Carmo%2C%20Olinda%20-%20PE%2C%2053120-020!5e0!3m2!1spt-BR!2sbr!4v1745000000000!5m2!1spt-BR!2sbr"
+            width="100%"
+            height="320"
+            style={{ border: 0, display: "block", filter: "saturate(.6) contrast(1.1) brightness(.85)" }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="AMP213 — Rua do Amparo, 213, Olinda"
+          />
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div
+              className="bg-[#F2CB53] text-[#0C0D1E] text-xs font-black tracking-[0.15em] uppercase px-5 py-3 shadow-lg"
+              style={{ fontFamily: DISPLAY }}
+            >
+              📍 Abrir no Google Maps
+            </div>
+          </div>
+        </a>
       </div>
     </section>
   );
@@ -872,7 +925,7 @@ function Gallery() {
           className="text-[#418BB0] text-xs font-semibold tracking-[0.35em] mb-4 text-center"
           style={{ fontFamily: BODY }}
         >
-          EDIÇÃO ANTERIOR
+          EDIÇÕES ANTERIORES
         </p>
         <h2
           className="text-5xl md:text-6xl font-black text-white text-center mb-16"
@@ -1027,7 +1080,7 @@ function Footer() {
               @amp.213
             </a>
             <a
-              href="https://wa.me/55"
+              href="https://wa.me/5581989713537"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/45 hover:text-[#418BB0] transition-colors"
@@ -1056,6 +1109,24 @@ function Footer() {
   );
 }
 
+/* ── WhatsApp Fab ── */
+function WhatsAppFab() {
+  return (
+    <a
+      href="https://wa.me/5581989713537?text=Oi!%20Quero%20saber%20mais%20sobre%20o%20DALE%20Nova%20Temporada"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-6 right-5 z-50 flex items-center gap-2 bg-[#25D366] text-white pl-3 pr-5 py-3 shadow-lg shadow-black/40 hover:scale-105 transition-transform rounded-full"
+      aria-label="Fale conosco no WhatsApp"
+    >
+      <MessageCircle className="w-5 h-5" />
+      <span className="text-sm font-bold" style={{ fontFamily: DISPLAY }}>
+        Fale Conosco
+      </span>
+    </a>
+  );
+}
+
 /* ── App ── */
 export default function App() {
   return (
@@ -1075,6 +1146,7 @@ export default function App() {
       <Gallery />
       <FAQ />
       <Footer />
+      <WhatsAppFab />
     </div>
   );
 }

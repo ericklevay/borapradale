@@ -35,8 +35,10 @@ function getTimeLeft(target: Date): TimeLeft {
 }
 
 function useCountdown(target: Date): TimeLeft {
-  const [t, setT] = useState<TimeLeft>(getTimeLeft(target));
+  // Server renders zeros; client sets real value in effect to avoid hydration mismatch
+  const [t, setT] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   useEffect(() => {
+    setT(getTimeLeft(target));
     const id = setInterval(() => setT(getTimeLeft(target)), 1000);
     return () => clearInterval(id);
   }, [target]);
@@ -155,6 +157,7 @@ function Hero() {
           {units.map(({ value, label }) => (
             <div key={label} className="text-center">
               <div
+                suppressHydrationWarning
                 className="text-4xl md:text-7xl font-black text-white tabular-nums leading-none"
                 style={{ fontFamily: DISPLAY }}
               >

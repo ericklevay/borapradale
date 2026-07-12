@@ -60,6 +60,15 @@
       </script>
 
       <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
+
+      <!-- Google Analytics — carregado no HTML estático, fora do React -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSQR780PQJ"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WSQR780PQJ');
+      </script>
     </head>
 
     <body>

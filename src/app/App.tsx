@@ -610,7 +610,7 @@ function Tickets() {
       batch: "ESPECIAL",
       name: "Mãe Solo",
       note: "Homenagem às mães solo",
-      price: "R$ 25",
+      price: "R$ 30",
       featured: false,
     },
     {

@@ -614,10 +614,17 @@ function Tickets() {
       featured: false,
     },
     {
+      batch: "2 PESSOAS",
+      name: "Mesa Bistrô (2 pessoas)",
+      note: "Ingressos inclusos + atendimento",
+      price: "R$ 80",
+      featured: false,
+    },
+    {
       batch: "4 PESSOAS",
-      name: "Mesa VIP",
-      note: "Mesa reservada + atendimento",
-      price: "R$ 200",
+      name: "Mesa Bistrô (4 pessoas)",
+      note: "Ingressos inclusos + atendimento",
+      price: "R$ 150",
       featured: false,
     },
   ];

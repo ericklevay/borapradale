@@ -630,7 +630,9 @@ function Aulao() {
               Em uma aula leve, divertida e acolhedora, você vai conhecer os movimentos básicos, praticar em dupla e ganhar confiança para aproveitar a festa logo em seguida.
             </p>
             <a
-              href="#ingressos"
+              href="https://www.sympla.com.br/evento/dale-aura---sexta---17-de-julho---amp-213---olinda-rua-do-amparo-213/3489579"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-[#C4622D] text-white px-10 py-4 text-sm font-black tracking-[0.2em] hover:bg-[#d97040] transition-colors"
               style={{ fontFamily: DISPLAY }}
             >

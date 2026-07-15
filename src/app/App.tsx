@@ -716,20 +716,23 @@ function Tickets() {
       note: "Vagas limitadas",
       price: "R$ 30",
       featured: false,
+      sold: true,
     },
     {
       batch: "2º LOTE",
-      name: "Lote 2",
+      name: "Ingresso Individual",
       note: "",
       price: "R$ 40",
       featured: false,
+      sold: false,
     },
     {
       batch: "DUPLA",
       name: "Casal / Date",
       note: "Entrada para 2 pessoas",
-      price: "R$ 50",
+      price: "R$ 60",
       featured: true,
+      sold: false,
     },
     {
       batch: "ESPECIAL",
@@ -737,20 +740,23 @@ function Tickets() {
       note: "Homenagem às mães solo",
       price: "R$ 30",
       featured: false,
+      sold: false,
     },
     {
       batch: "2 PESSOAS",
       name: "Mesa Bistrô (2 pessoas)",
       note: "Ingressos inclusos + atendimento",
-      price: "R$ 80",
+      price: "R$ 100",
       featured: false,
+      sold: false,
     },
     {
       batch: "4 PESSOAS",
       name: "Mesa Bistrô (4 pessoas)",
       note: "Ingressos inclusos + atendimento",
-      price: "R$ 150",
+      price: "R$ 180",
       featured: false,
+      sold: false,
     },
   ];
   return (
@@ -780,12 +786,22 @@ function Tickets() {
             <div
               key={t.name}
               className={`relative p-6 border transition-all duration-200 ${
-                t.featured
+                t.sold
+                  ? "bg-[#0C0D1E] border-white/10 opacity-60"
+                  : t.featured
                   ? "bg-[#393A84] border-[#418BB0]/70 shadow-xl shadow-[#393A84]/25"
                   : "bg-[#13153A] border-[#393A84]/30 hover:border-[#393A84]/60"
               }`}
             >
-              {t.featured && (
+              {t.sold && (
+                <span
+                  className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white/15 text-white/60 text-[10px] font-black px-3 py-1 tracking-[0.25em]"
+                  style={{ fontFamily: DISPLAY }}
+                >
+                  ENCERRADO
+                </span>
+              )}
+              {t.featured && !t.sold && (
                 <span
                   className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#F2CB53] text-[#0C0D1E] text-[10px] font-black px-3 py-1 tracking-[0.25em]"
                   style={{ fontFamily: DISPLAY }}
@@ -794,13 +810,13 @@ function Tickets() {
                 </span>
               )}
               <span
-                className="text-[#418BB0] text-[10px] font-bold tracking-[0.3em]"
+                className={`text-[10px] font-bold tracking-[0.3em] ${t.sold ? "text-white/30" : "text-[#418BB0]"}`}
                 style={{ fontFamily: BODY }}
               >
                 {t.batch}
               </span>
               <h3
-                className="text-2xl font-black text-white mt-1"
+                className={`text-2xl font-black mt-1 ${t.sold ? "text-white/40 line-through decoration-white/20" : "text-white"}`}
                 style={{ fontFamily: DISPLAY }}
               >
                 {t.name}
@@ -814,7 +830,7 @@ function Tickets() {
                 </p>
               )}
               <div
-                className="text-4xl font-black text-[#F2CB53] mt-5"
+                className={`text-4xl font-black mt-5 ${t.sold ? "text-white/20" : "text-[#F2CB53]"}`}
                 style={{ fontFamily: DISPLAY }}
               >
                 {t.price}

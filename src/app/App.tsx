@@ -45,7 +45,7 @@ function useCountdown(target: Date): TimeLeft {
   return t;
 }
 
-const EVENT_DATE = new Date("2026-07-17T19:00:00-03:00");
+const EVENT_DATE = new Date("2026-08-21T19:00:00-03:00");
 
 /* ── Nav ── */
 function Nav() {
@@ -125,11 +125,11 @@ function Hero() {
           BORA PRA
         </p>
         <h1 className="sr-only">
-          DALE Aura — Festa de Música Latina em Olinda, 17 de Julho de 2026
+          DALE ME GUSTA — Festa de Música Latina em Olinda, 21 de Agosto de 2026
         </h1>
         <img
           src="/img/top-banner-aura.jpg"
-          alt="DALE Aura"
+          alt="DALE ME GUSTA"
           width={1400}
           height={733}
           className="w-full max-w-3xl mx-auto h-auto"
@@ -141,7 +141,7 @@ function Hero() {
           style={{ fontFamily: DISPLAY }}
         >
           <span className="text-[#F2CB53] text-lg md:text-2xl font-bold tracking-[0.2em]">
-            17 JULHO
+            21 AGOSTO
           </span>
           <span className="text-white/25 hidden sm:inline">·</span>
           <span className="text-white text-lg md:text-2xl font-semibold tracking-widest">
@@ -196,7 +196,7 @@ function Hero() {
           className="mt-8 text-white/35 text-sm italic"
           style={{ fontFamily: BODY }}
         >
-          "Chegou antes das 20h? Tem um shot incluso pra você."
+          "Chegou antes das 21h? Tem um shot incluso pra você."
         </p>
       </div>
 
@@ -337,7 +337,7 @@ function Schedule() {
       desc: "Entrada liberada. Primeiros a chegar ganham o shot incluso.",
     },
     {
-      time: "19h00 – 20h00",
+      time: "19h00 – 21h00",
       title: "Shot de Boas-vindas",
       desc: "Resgate no balcão ao apresentar seu ingresso.",
     },
@@ -364,7 +364,7 @@ function Schedule() {
           className="text-[#418BB0] text-xs font-semibold tracking-[0.35em] mb-4 text-center"
           style={{ fontFamily: BODY }}
         >
-          17 JULHO 2026
+          21 AGOSTO 2026
         </p>
         <h2
           className="text-5xl md:text-6xl font-black text-white text-center mb-16"
@@ -848,7 +848,7 @@ function Tickets() {
 
         <div className="flex flex-col gap-4 mt-6">
           <a
-            href="https://www.sympla.com.br/evento/dale-aura---sexta---17-de-julho---amp-213---olinda-rua-do-amparo-213/3489579"
+            href="https://www.sympla.com.br/evento/dale-me-gusta-sexta-21-de-agosto-amp-213-olinda-rua-do-amparo-213/3537954"
             target="_blank"
             rel="noopener noreferrer"
             className="block text-center bg-[#2EC420] text-white px-8 py-4 text-sm font-black tracking-[0.15em] uppercase hover:brightness-110 transition-all shadow-lg shadow-[#2EC420]/30"
@@ -926,7 +926,7 @@ function Venue() {
                 className="text-white/65 text-sm"
                 style={{ fontFamily: BODY }}
               >
-                Sexta-feira, 17 de julho · Abertura às 19h
+                Sexta-feira, 21 de agosto · Abertura às 19h
               </span>
             </div>
             <div className="flex items-start gap-3">
@@ -1116,7 +1116,7 @@ function FAQ() {
     },
     {
       q: "Como funciona o shot incluso?",
-      a: "Quem chegar até as 20h tem direito a um shot gratuito. É só apresentar o ingresso no balcão na entrada.",
+      a: "Quem chegar até as 21h tem direito a um shot gratuito. É só apresentar o ingresso no balcão na entrada.",
     },
     {
       q: "Posso comprar pelo PIX?",
@@ -1206,7 +1206,7 @@ function Footer() {
               className="text-white/35 text-sm"
               style={{ fontFamily: BODY }}
             >
-              17 Julho · AMP213 · Olinda, PE
+              21 Agosto · AMP213 · Olinda, PE
             </p>
           </div>
           <div className="flex items-center gap-6">

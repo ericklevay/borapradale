@@ -58,7 +58,7 @@ function Nav() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#0C0D1E]/95 backdrop-blur-md border-b border-[#393A84]/40" : ""
+        scrolled ? "bg-[#0F0406]/95 backdrop-blur-md border-b border-[#7A1522]/40" : ""
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -99,27 +99,27 @@ function Hero() {
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
       {/* Photo backdrop */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-[#0C0D1E]"
+        className="absolute inset-0 bg-cover bg-center bg-[#0F0406]"
         style={{
           backgroundImage:
             "url(/img/hero.jpg)",
         }}
       />
       {/* Overlays */}
-      <div className="absolute inset-0 bg-[#0C0D1E]/70" />
+      <div className="absolute inset-0 bg-[#0F0406]/75" />
       <div
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at 25% 60%, rgba(57,58,132,0.55) 0%, transparent 65%), radial-gradient(ellipse at 75% 30%, rgba(65,139,176,0.25) 0%, transparent 60%)",
+            "radial-gradient(ellipse at 25% 60%, rgba(122,21,34,0.6) 0%, transparent 65%), radial-gradient(ellipse at 75% 30%, rgba(239,68,68,0.3) 0%, transparent 60%)",
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0C0D1E]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0F0406]" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 w-full max-w-5xl mx-auto">
         <p
-          className="text-[#418BB0] text-xs font-semibold tracking-[0.45em] mb-2"
+          className="text-[#EF4444] text-xs font-semibold tracking-[0.45em] mb-2"
           style={{ fontFamily: BODY }}
         >
           BORA PRA
@@ -128,16 +128,16 @@ function Hero() {
           DALE ME GUSTA — Festa de Música Latina em Olinda, 21 de Agosto de 2026
         </h1>
         <img
-          src="/img/top-banner-aura.jpg"
-          alt="DALE ME GUSTA"
-          width={1400}
-          height={733}
-          className="w-full max-w-3xl mx-auto h-auto"
+          src="/img/hero.jpg"
+          alt="DALE ME GUSTA - 21 de Agosto no AMP213"
+          width={1200}
+          height={630}
+          className="w-full max-w-3xl mx-auto h-auto rounded-2xl shadow-2xl shadow-red-950/80 border border-[#7A1522]"
         />
 
         {/* Date line */}
         <div
-          className="flex flex-wrap items-center justify-center gap-2 md:gap-5 mt-2 mb-10"
+          className="flex flex-wrap items-center justify-center gap-2 md:gap-5 mt-4 mb-10"
           style={{ fontFamily: DISPLAY }}
         >
           <span className="text-[#F2CB53] text-lg md:text-2xl font-bold tracking-[0.2em]">
@@ -165,7 +165,7 @@ function Hero() {
                 {String(value).padStart(2, "0")}
               </div>
               <div
-                className="text-[#418BB0] text-[10px] font-semibold tracking-[0.25em] mt-2"
+                className="text-[#EF4444] text-[10px] font-semibold tracking-[0.25em] mt-2"
                 style={{ fontFamily: BODY }}
               >
                 {label}
@@ -217,7 +217,7 @@ function Marquee() {
   ];
   const all = [...genres, ...genres, ...genres];
   return (
-    <div className="bg-[#393A84] py-[14px] overflow-hidden">
+    <div className="bg-[#7A1522] py-[14px] overflow-hidden">
       <div
         className="flex gap-0 whitespace-nowrap"
         style={{ animation: "daleMarquee 22s linear infinite" }}
@@ -272,7 +272,7 @@ function Sobre() {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div>
           <p
-            className="text-[#418BB0] text-xs font-semibold tracking-[0.35em] mb-5"
+            className="text-[#EF4444] text-xs font-semibold tracking-[0.35em] mb-5"
             style={{ fontFamily: BODY }}
           >
             SOBRE O EVENTO
@@ -305,7 +305,7 @@ function Sobre() {
           {highlights.map((h) => (
             <div
               key={h.title}
-              className="bg-[#13153A] border border-[#393A84]/35 p-5 hover:border-[#418BB0]/50 transition-colors"
+              className="bg-[#20080B] border border-[#7A1522]/35 p-5 hover:border-[#EF4444]/50 transition-colors"
             >
               <div className="text-[#F2CB53] mb-3">{h.icon}</div>
               <h3
@@ -358,10 +358,10 @@ function Schedule() {
     },
   ];
   return (
-    <section id="programacao" className="py-28 px-6 bg-[#080910]">
+    <section id="programacao" className="py-28 px-6 bg-[#0A0304]">
       <div className="max-w-2xl mx-auto">
         <p
-          className="text-[#418BB0] text-xs font-semibold tracking-[0.35em] mb-4 text-center"
+          className="text-[#EF4444] text-xs font-semibold tracking-[0.35em] mb-4 text-center"
           style={{ fontFamily: BODY }}
         >
           21 AGOSTO 2026
@@ -372,12 +372,12 @@ function Schedule() {
         >
           PROGRAMAÇÃO
         </h2>
-        <div className="relative pl-10 border-l border-[#393A84]/40 space-y-10">
+        <div className="relative pl-10 border-l border-[#7A1522]/40 space-y-10">
           {items.map((item, i) => (
             <div key={i} className="relative">
-              <div className="absolute -left-[2.45rem] top-1 w-3 h-3 rounded-full bg-[#F2CB53] border-2 border-[#080910]" />
+              <div className="absolute -left-[2.45rem] top-1 w-3 h-3 rounded-full bg-[#F2CB53] border-2 border-[#0A0304]" />
               <span
-                className="text-[#418BB0] text-xs font-bold tracking-[0.2em]"
+                className="text-[#EF4444] text-xs font-bold tracking-[0.2em]"
                 style={{ fontFamily: DISPLAY }}
               >
                 {item.time}
@@ -408,7 +408,7 @@ function Lineup() {
     <section id="atracoes" className="py-28 px-6">
       <div className="max-w-6xl mx-auto">
         <p
-          className="text-[#418BB0] text-xs font-semibold tracking-[0.35em] mb-4 text-center"
+          className="text-[#EF4444] text-xs font-semibold tracking-[0.35em] mb-4 text-center"
           style={{ fontFamily: BODY }}
         >
           NA NOITE
@@ -421,7 +421,7 @@ function Lineup() {
         </h2>
         <div className="grid md:grid-cols-2 gap-5">
           {/* DJ Incidental */}
-          <div className="relative overflow-hidden group bg-[#13153A]">
+          <div className="relative overflow-hidden group bg-[#20080B]">
             <img
               src="/img/dj-incidental.jpg"
               alt="DJ Incidental no palco"
@@ -430,7 +430,7 @@ function Lineup() {
               loading="lazy"
               className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-600"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0C0D1E] via-[#0C0D1E]/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0F0406] via-[#0F0406]/30 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-7">
               <span
                 className="text-[#F2CB53] text-xs font-bold tracking-[0.3em]"
@@ -453,7 +453,7 @@ function Lineup() {
             </div>
           </div>
           {/* Corpo de Baile */}
-          <div className="relative overflow-hidden group bg-[#13153A]">
+          <div className="relative overflow-hidden group bg-[#20080B]">
             <img
               src="/img/corpo-de-baile.jpg"
               alt="Casal do Corpo de Baile dançando"
@@ -462,10 +462,10 @@ function Lineup() {
               loading="lazy"
               className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-600"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0C0D1E] via-[#0C0D1E]/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0F0406] via-[#0F0406]/30 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-7">
               <span
-                className="text-[#418BB0] text-xs font-bold tracking-[0.3em]"
+                className="text-[#EF4444] text-xs font-bold tracking-[0.3em]"
                 style={{ fontFamily: BODY }}
               >
                 DANÇA · INICIANTES
@@ -493,10 +493,10 @@ function Lineup() {
 /* ── Video ── */
 function VideoSection() {
   return (
-    <section className="py-28 px-6 bg-[#080910]">
+    <section className="py-28 px-6 bg-[#0A0304]">
       <div className="max-w-6xl mx-auto">
         <p
-          className="text-[#418BB0] text-xs font-semibold tracking-[0.35em] mb-4 text-center"
+          className="text-[#EF4444] text-xs font-semibold tracking-[0.35em] mb-4 text-center"
           style={{ fontFamily: F }}
         >
           SENTE A VIBE
@@ -522,11 +522,11 @@ function VideoSection() {
               className="absolute -inset-4 rounded-3xl blur-2xl opacity-40"
               style={{
                 background:
-                  "radial-gradient(ellipse, #393A84 0%, #418BB0 60%, transparent 100%)",
+                  "radial-gradient(ellipse, #7A1522 0%, #EF4444 60%, transparent 100%)",
               }}
             />
             {/* Phone frame */}
-            <div className="relative rounded-[2rem] overflow-hidden border-2 border-[#393A84]/60 shadow-2xl shadow-[#393A84]/30 bg-[#0C0D1E]">
+            <div className="relative rounded-[2rem] overflow-hidden border-2 border-[#7A1522]/60 shadow-2xl shadow-red-950/50 bg-[#0F0406]">
               <div className="aspect-[9/16]">
                 <iframe
                   src="https://www.youtube.com/embed/IkJJu9CePAg?rel=0&modestbranding=1&playsinline=1"
@@ -592,10 +592,10 @@ function Aulao() {
     "Uma noite de música e dança no AMP 213",
   ];
   return (
-    <section id="aulao" className="py-28 px-6 bg-[#080910]">
+    <section id="aulao" className="py-28 px-6 bg-[#0A0304]">
       <div className="max-w-6xl mx-auto">
         <p
-          className="text-[#C4622D] text-xs font-semibold tracking-[0.35em] mb-4 text-center"
+          className="text-[#EF4444] text-xs font-semibold tracking-[0.35em] mb-4 text-center"
           style={{ fontFamily: BODY }}
         >
           ANTES DA PISTA FERVER
@@ -611,7 +611,7 @@ function Aulao() {
           className="text-white/35 text-center text-sm mb-16"
           style={{ fontFamily: BODY }}
         >
-          17 de Julho · 19h30 às 20h30 · AMP 213
+          21 de Agosto · 19h30 às 20h30 · AMP 213
         </p>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -621,7 +621,7 @@ function Aulao() {
               className="text-white/65 leading-relaxed text-base mb-5"
               style={{ fontFamily: BODY }}
             >
-              A DALE AURA começa com uma experiência especial no AMP 213: um Aulão de Salsa & Bachata pensado para quem quer aprender, se soltar e entrar no clima da música latina. Não importa se você nunca dançou ou se já conhece alguns passos — o convite é para viver a experiência completa.
+              A DALE ME GUSTA começa com uma experiência especial no AMP 213: um Aulão de Salsa & Bachata pensado para quem quer aprender, se soltar e entrar no clima da música latina. Não importa se você nunca dançou ou se já conhece alguns passos — o convite é para viver a experiência completa.
             </p>
             <p
               className="text-white/65 leading-relaxed text-base mb-10"
@@ -630,10 +630,10 @@ function Aulao() {
               Em uma aula leve, divertida e acolhedora, você vai conhecer os movimentos básicos, praticar em dupla e ganhar confiança para aproveitar a festa logo em seguida.
             </p>
             <a
-              href="https://www.sympla.com.br/evento/dale-aura---sexta---17-de-julho---amp-213---olinda-rua-do-amparo-213/3489579"
+              href="https://www.sympla.com.br/evento/dale-me-gusta-sexta-21-de-agosto-amp-213-olinda-rua-do-amparo-213/3537954"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-[#C4622D] text-white px-10 py-4 text-sm font-black tracking-[0.2em] hover:bg-[#d97040] transition-colors"
+              className="inline-block bg-[#7A1522] text-white px-10 py-4 text-sm font-black tracking-[0.2em] hover:bg-[#8F1D2B] transition-colors"
               style={{ fontFamily: DISPLAY }}
             >
               GARANTIR MINHA VAGA
@@ -643,9 +643,9 @@ function Aulao() {
           {/* Info + Includes */}
           <div className="space-y-3">
             {/* Info bar */}
-            <div className="grid grid-cols-3 border border-[#C4622D]/35 divide-x divide-[#C4622D]/25">
+            <div className="grid grid-cols-3 border border-[#7A1522]/40 divide-x divide-[#7A1522]/30">
               {[
-                { top: "17 JULHO", bottom: "SEXTA-FEIRA" },
+                { top: "21 AGOSTO", bottom: "SEXTA-FEIRA" },
                 { top: "19H30", bottom: "ÀS 20H30" },
                 { top: "AMP 213", bottom: "OLINDA · PE" },
               ].map((item) => (
@@ -667,7 +667,7 @@ function Aulao() {
             </div>
 
             {/* Badge — um único ingresso */}
-            <div className="bg-[#C4622D] p-6">
+            <div className="bg-[#7A1522] p-6">
               <p
                 className="text-white/70 text-[10px] font-semibold tracking-[0.35em] mb-2"
                 style={{ fontFamily: BODY }}
@@ -760,10 +760,10 @@ function Tickets() {
     },
   ];
   return (
-    <section id="ingressos" className="py-28 px-6 bg-[#080910]">
+    <section id="ingressos" className="py-28 px-6 bg-[#0A0304]">
       <div className="max-w-6xl mx-auto">
         <p
-          className="text-[#418BB0] text-xs font-semibold tracking-[0.35em] mb-4 text-center"
+          className="text-[#EF4444] text-xs font-semibold tracking-[0.35em] mb-4 text-center"
           style={{ fontFamily: BODY }}
         >
           GARANTA O SEU
@@ -787,10 +787,10 @@ function Tickets() {
               key={t.name}
               className={`relative p-6 border transition-all duration-200 ${
                 t.sold
-                  ? "bg-[#0C0D1E] border-white/10 opacity-60"
+                  ? "bg-[#0F0406] border-white/10 opacity-60"
                   : t.featured
-                  ? "bg-[#393A84] border-[#418BB0]/70 shadow-xl shadow-[#393A84]/25"
-                  : "bg-[#13153A] border-[#393A84]/30 hover:border-[#393A84]/60"
+                  ? "bg-[#7A1522] border-[#EF4444]/70 shadow-xl shadow-[#7A1522]/25"
+                  : "bg-[#20080B] border-[#7A1522]/30 hover:border-[#7A1522]/60"
               }`}
             >
               {t.sold && (
@@ -810,7 +810,7 @@ function Tickets() {
                 </span>
               )}
               <span
-                className={`text-[10px] font-bold tracking-[0.3em] ${t.sold ? "text-white/30" : "text-[#418BB0]"}`}
+                className={`text-[10px] font-bold tracking-[0.3em] ${t.sold ? "text-white/30" : "text-[#EF4444]"}`}
                 style={{ fontFamily: BODY }}
               >
                 {t.batch}
@@ -877,7 +877,7 @@ function Venue() {
     <section id="local" className="py-28 px-6">
       <div className="max-w-6xl mx-auto md:hidden">
         <p
-          className="text-[#418BB0] text-xs font-semibold tracking-[0.35em] mb-5"
+          className="text-[#EF4444] text-xs font-semibold tracking-[0.35em] mb-5"
           style={{ fontFamily: BODY }}
         >
           ONDE VAI SER
@@ -892,7 +892,7 @@ function Venue() {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div className="order-2 md:order-none">
           <p
-            className="hidden md:block text-[#418BB0] text-xs font-semibold tracking-[0.35em] mb-5"
+            className="hidden md:block text-[#EF4444] text-xs font-semibold tracking-[0.35em] mb-5"
             style={{ fontFamily: BODY }}
           >
             ONDE VAI SER
@@ -921,7 +921,7 @@ function Venue() {
               </span>
             </div>
             <div className="flex items-start gap-3">
-              <Clock className="text-[#418BB0] w-4 h-4 mt-0.5 shrink-0" />
+              <Clock className="text-[#EF4444] w-4 h-4 mt-0.5 shrink-0" />
               <span
                 className="text-white/65 text-sm"
                 style={{ fontFamily: BODY }}
@@ -961,8 +961,8 @@ function Venue() {
             loading="lazy"
             className="w-full aspect-[2/3] object-cover"
           />
-          <div className="absolute inset-0 ring-1 ring-inset ring-[#393A84]/40" />
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0C0D1E]/70 to-transparent h-24" />
+          <div className="absolute inset-0 ring-1 ring-inset ring-[#7A1522]/40" />
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0F0406]/70 to-transparent h-24" />
         </div>
       </div>
       <div className="max-w-6xl mx-auto mt-10">
@@ -970,7 +970,7 @@ function Venue() {
           href="https://maps.google.com/?q=Rua+do+Amparo+213+Olinda+PE"
           target="_blank"
           rel="noopener noreferrer"
-          className="block relative border border-[#393A84]/40 overflow-hidden"
+          className="block relative border border-[#7A1522]/40 overflow-hidden"
         >
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d487.9!2d-34.85400!3d-8.01200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18a7aba9d3f5%3A0x5b1e2a5ecf2dcf21!2sRua%20do%20Amparo%2C%20213%20-%20Carmo%2C%20Olinda%20-%20PE%2C%2053120-020!5e0!3m2!1spt-BR!2sbr!4v1745000000000!5m2!1spt-BR!2sbr"
@@ -1070,10 +1070,10 @@ function Gallery() {
     },
   ];
   return (
-    <section id="galeria" className="py-28 px-6 bg-[#080910]">
+    <section id="galeria" className="py-28 px-6 bg-[#0A0304]">
       <div className="max-w-6xl mx-auto">
         <p
-          className="text-[#418BB0] text-xs font-semibold tracking-[0.35em] mb-4 text-center"
+          className="text-[#EF4444] text-xs font-semibold tracking-[0.35em] mb-4 text-center"
           style={{ fontFamily: BODY }}
         >
           EDIÇÕES ANTERIORES
@@ -1088,7 +1088,7 @@ function Gallery() {
           {photos.map((p, i) => (
             <div
               key={i}
-              className={`overflow-hidden bg-[#13153A] ${p.tall ? "row-span-2" : ""}`}
+              className={`overflow-hidden bg-[#20080B] ${p.tall ? "row-span-2" : ""}`}
             >
               <img
                 src={p.url}
@@ -1143,7 +1143,7 @@ function FAQ() {
     <section id="faq" className="py-28 px-6">
       <div className="max-w-2xl mx-auto">
         <p
-          className="text-[#418BB0] text-xs font-semibold tracking-[0.35em] mb-4 text-center"
+          className="text-[#EF4444] text-xs font-semibold tracking-[0.35em] mb-4 text-center"
           style={{ fontFamily: BODY }}
         >
           DÚVIDAS
@@ -1158,11 +1158,11 @@ function FAQ() {
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className="border border-[#393A84]/30 overflow-hidden"
+              className="border border-[#7A1522]/30 overflow-hidden"
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-[#13153A]/60 transition-colors"
+                className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-[#20080B]/60 transition-colors"
               >
                 <span
                   className="text-white font-semibold pr-4 text-sm"
@@ -1171,7 +1171,7 @@ function FAQ() {
                   {faq.q}
                 </span>
                 <ChevronDown
-                  className={`shrink-0 text-[#418BB0] w-5 h-5 transition-transform duration-200 ${
+                  className={`shrink-0 text-[#EF4444] w-5 h-5 transition-transform duration-200 ${
                     open === i ? "rotate-180" : ""
                   }`}
                 />
@@ -1197,7 +1197,7 @@ function FAQ() {
 /* ── Footer ── */
 function Footer() {
   return (
-    <footer className="bg-[#080910] border-t border-[#393A84]/30 py-14 px-6">
+    <footer className="bg-[#0A0304] border-t border-[#7A1522]/30 py-14 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
@@ -1234,7 +1234,7 @@ function Footer() {
               href="https://wa.me/5581989713537"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/45 hover:text-[#418BB0] transition-colors"
+              className="text-white/45 hover:text-[#EF4444] transition-colors"
             >
               <MessageCircle className="w-5 h-5" />
             </a>
@@ -1247,7 +1247,7 @@ function Footer() {
             COMPRAR INGRESSO
           </a>
         </div>
-        <div className="mt-10 pt-6 border-t border-[#393A84]/20 text-center">
+        <div className="mt-10 pt-6 border-t border-[#7A1522]/20 text-center">
           <p
             className="text-white/20 text-xs"
             style={{ fontFamily: BODY }}

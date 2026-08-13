@@ -102,7 +102,7 @@ function Hero() {
         className="absolute inset-0 bg-cover bg-center bg-[#0F0406]"
         style={{
           backgroundImage:
-            "url(/img/hero.jpg)",
+            "url(/img/galeria-1.jpg)",
         }}
       />
       {/* Overlays */}
@@ -129,7 +129,7 @@ function Hero() {
         </h1>
         <img
           src="/img/hero.jpg"
-          alt="DALE ME GUSTA - 21 de Agosto no AMP213"
+          alt="DALE ME GUSTA - Cartaz Oficial do Evento"
           width={1200}
           height={630}
           className="w-full max-w-3xl mx-auto h-auto rounded-2xl shadow-2xl shadow-red-950/80 border border-[#7A1522]"
@@ -587,7 +587,7 @@ function VideoSection() {
 function Aulao() {
   const includes = [
     "Aulão de Salsa & Bachata (19h30 às 20h30)",
-    "Entrada para a festa DALE AURA",
+    "Entrada para a festa DALE ME GUSTA",
     "DJ Incidental + Corpo de Baile",
     "Uma noite de música e dança no AMP 213",
   ];
@@ -716,7 +716,7 @@ function Tickets() {
       note: "Vagas limitadas",
       price: "R$ 30",
       featured: false,
-      sold: true,
+      sold: false,
     },
     {
       batch: "2º LOTE",

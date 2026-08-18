@@ -710,7 +710,7 @@ function Tickets() {
       note: "Vagas limitadas",
       price: "R$ 30",
       featured: false,
-      sold: false,
+      sold: true,
     },
     {
       batch: "2º LOTE",

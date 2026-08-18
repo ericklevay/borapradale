@@ -529,7 +529,7 @@ function VideoSection() {
             <div className="relative rounded-[2rem] overflow-hidden border-2 border-[#7A1522]/60 shadow-2xl shadow-red-950/50 bg-[#0F0406]">
               <div className="aspect-[9/16]">
                 <iframe
-                  src="https://www.youtube.com/embed/IkJJu9CePAg?rel=0&modestbranding=1&playsinline=1"
+                  src="https://www.youtube.com/embed/7OikNAgw0-c?rel=0&modestbranding=1&playsinline=1"
                   title="DALE — vídeo da festa"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -566,7 +566,7 @@ function VideoSection() {
                 COMPRAR INGRESSO
               </a>
               <a
-                href="https://www.youtube.com/shorts/IkJJu9CePAg"
+                href="https://www.youtube.com/shorts/7OikNAgw0-c"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-white/20 text-white/70 px-8 py-4 text-sm font-semibold hover:border-white/50 hover:text-white transition-colors text-center inline-flex items-center justify-center gap-2"

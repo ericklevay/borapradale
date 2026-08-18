@@ -117,13 +117,7 @@ function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0F0406]" />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 w-full max-w-5xl mx-auto">
-        <p
-          className="text-[#EF4444] text-xs font-semibold tracking-[0.45em] mb-2"
-          style={{ fontFamily: BODY }}
-        >
-          BORA PRA
-        </p>
+      <div className="relative z-10 text-center px-6 pt-24 pb-12 w-full max-w-5xl mx-auto">
         <h1 className="sr-only">
           DALE ME GUSTA — Festa de Música Latina em Olinda, 21 de Agosto de 2026
         </h1>

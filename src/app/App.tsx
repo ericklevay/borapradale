@@ -62,13 +62,12 @@ function Nav() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <img src="/img/logo-dale-aura.png" alt="DALE" width={1517} height={769} className="h-10 w-auto object-contain" />
+        <img src="/img/logo.png" alt="DALE" width={1024} height={530} className="h-10 w-auto object-contain" />
         <div
           className="hidden md:flex items-center gap-8 text-xs font-semibold text-white/60 tracking-[0.2em]"
           style={{ fontFamily: BODY }}
         >
           <a href="#sobre" className="hover:text-white transition-colors">SOBRE</a>
-          <a href="#aulao" className="hover:text-[#F2CB53] transition-colors">AULÃO</a>
           <a href="#programacao" className="hover:text-white transition-colors">PROGRAMAÇÃO</a>
           <a href="#atracoes" className="hover:text-white transition-colors">ATRAÇÕES</a>
           <a href="#galeria" className="hover:text-white transition-colors">GALERIA</a>
@@ -119,7 +118,7 @@ function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center px-6 pt-24 pb-12 w-full max-w-5xl mx-auto">
         <h1 className="sr-only">
-          DALE ME GUSTA — Festa de Música Latina em Olinda, 21 de Agosto de 2026
+          DALE ME GUSTA — Festa de Música da América Latina em Olinda, 21 de Agosto de 2026
         </h1>
         <img
           src="/img/hero.jpg"
@@ -282,7 +281,7 @@ function Sobre() {
             className="text-white/55 leading-relaxed text-base mb-4"
             style={{ fontFamily: BODY }}
           >
-            DALE é uma festa de música latina em Olinda que reúne salsa, cumbia,
+            DALE é uma festa de música da América Latina em Olinda que reúne salsa, cumbia,
             reggaeton e muito mais num único espaço vibrante. No AMP213, você
             encontra pista de dança, aula para iniciantes, gastronomia e um
             ambiente acolhedor — pra ir sozinho, em casal ou em grupo.
@@ -577,129 +576,7 @@ function VideoSection() {
   );
 }
 
-/* ── Aulão ── */
-function Aulao() {
-  const includes = [
-    "Aulão de Salsa & Bachata (19h30 às 20h30)",
-    "Entrada para a festa DALE ME GUSTA",
-    "DJ Incidental + Corpo de Baile",
-    "Uma noite de música e dança no AMP 213",
-  ];
-  return (
-    <section id="aulao" className="py-28 px-6 bg-[#0A0304]">
-      <div className="max-w-6xl mx-auto">
-        <p
-          className="text-[#EF4444] text-xs font-semibold tracking-[0.35em] mb-4 text-center"
-          style={{ fontFamily: BODY }}
-        >
-          ANTES DA PISTA FERVER
-        </p>
-        <h2
-          className="text-5xl md:text-7xl font-black text-white text-center leading-none mb-4"
-          style={{ fontFamily: DISPLAY }}
-        >
-          AULÃO DE<br />
-          <span className="text-[#F2CB53]">SALSA & BACHATA</span>
-        </h2>
-        <p
-          className="text-white/35 text-center text-sm mb-16"
-          style={{ fontFamily: BODY }}
-        >
-          21 de Agosto · 19h30 às 20h30 · AMP 213
-        </p>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          {/* Copy */}
-          <div>
-            <p
-              className="text-white/65 leading-relaxed text-base mb-5"
-              style={{ fontFamily: BODY }}
-            >
-              A DALE ME GUSTA começa com uma experiência especial no AMP 213: um Aulão de Salsa & Bachata pensado para quem quer aprender, se soltar e entrar no clima da música latina. Não importa se você nunca dançou ou se já conhece alguns passos — o convite é para viver a experiência completa.
-            </p>
-            <p
-              className="text-white/65 leading-relaxed text-base mb-10"
-              style={{ fontFamily: BODY }}
-            >
-              Em uma aula leve, divertida e acolhedora, você vai conhecer os movimentos básicos, praticar em dupla e ganhar confiança para aproveitar a festa logo em seguida.
-            </p>
-            <a
-              href="https://www.sympla.com.br/evento/dale-me-gusta-sexta-21-de-agosto-amp-213-olinda-rua-do-amparo-213/3537954"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-[#7A1522] text-white px-10 py-4 text-sm font-black tracking-[0.2em] hover:bg-[#8F1D2B] transition-colors"
-              style={{ fontFamily: DISPLAY }}
-            >
-              GARANTIR MINHA VAGA
-            </a>
-          </div>
-
-          {/* Info + Includes */}
-          <div className="space-y-3">
-            {/* Info bar */}
-            <div className="grid grid-cols-3 border border-[#7A1522]/40 divide-x divide-[#7A1522]/30">
-              {[
-                { top: "21 AGOSTO", bottom: "SEXTA-FEIRA" },
-                { top: "19H30", bottom: "ÀS 20H30" },
-                { top: "AMP 213", bottom: "OLINDA · PE" },
-              ].map((item) => (
-                <div key={item.top} className="p-4 text-center">
-                  <div
-                    className="text-white font-black text-base leading-none"
-                    style={{ fontFamily: DISPLAY }}
-                  >
-                    {item.top}
-                  </div>
-                  <div
-                    className="text-white/40 text-[10px] tracking-[0.2em] mt-1"
-                    style={{ fontFamily: BODY }}
-                  >
-                    {item.bottom}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Badge — um único ingresso */}
-            <div className="bg-[#7A1522] p-6">
-              <p
-                className="text-white/70 text-[10px] font-semibold tracking-[0.35em] mb-2"
-                style={{ fontFamily: BODY }}
-              >
-                UM ÚNICO INGRESSO INCLUI:
-              </p>
-              <p
-                className="text-white text-3xl font-black leading-none mb-5"
-                style={{ fontFamily: DISPLAY }}
-              >
-                AULÃO + FESTA
-              </p>
-              <ul className="space-y-2">
-                {includes.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-2 text-white/85 text-sm"
-                    style={{ fontFamily: BODY }}
-                  >
-                    <span className="text-white font-black mt-0.5">→</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <p
-              className="text-white/30 text-xs text-center pt-1"
-              style={{ fontFamily: BODY }}
-            >
-              Chegue cedo, conheça a casa e deixe a música conduzir a sua noite.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 /* ── Tickets ── */
 function Tickets() {
@@ -1195,7 +1072,7 @@ function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
-            <img src="/img/logo-dale-aura.png" alt="DALE" width={1517} height={769} loading="lazy" className="h-16 w-auto object-contain mx-auto md:mx-0 mb-1" />
+            <img src="/img/logo.png" alt="DALE" width={1024} height={530} loading="lazy" className="h-16 w-auto object-contain mx-auto md:mx-0 mb-1" />
             <p
               className="text-white/35 text-sm"
               style={{ fontFamily: BODY }}
@@ -1286,7 +1163,6 @@ export default function App() {
       <Sobre />
       <Schedule />
       <Lineup />
-      <Aulao />
       <Tickets />
       <Venue />
       <Gallery />

@@ -45,7 +45,7 @@ function useCountdown(target: Date): TimeLeft {
   return t;
 }
 
-const EVENT_DATE = new Date("2026-08-21T19:00:00-03:00");
+const EVENT_DATE = new Date("2026-09-18T19:00:00-03:00");
 
 /* ── Nav ── */
 function Nav() {
@@ -118,11 +118,11 @@ function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center px-6 pt-24 pb-12 w-full max-w-5xl mx-auto">
         <h1 className="sr-only">
-          DALE ME GUSTA — Festa de Música da América Latina em Olinda, 21 de Agosto de 2026
+          DALE — Edição de Aniversário no AMP 213 em Olinda, 18 de Setembro de 2026
         </h1>
         <img
           src="/img/hero.jpg"
-          alt="DALE ME GUSTA - Cartaz Oficial do Evento"
+          alt="DALE Edição de Aniversário - AMP 213 - Cartaz Oficial do Evento"
           width={1200}
           height={630}
           className="w-full max-w-3xl mx-auto h-auto rounded-2xl shadow-2xl shadow-red-950/80 border border-[#7A1522]"
@@ -134,7 +134,7 @@ function Hero() {
           style={{ fontFamily: DISPLAY }}
         >
           <span className="text-[#F2CB53] text-lg md:text-2xl font-bold tracking-[0.2em]">
-            21 AGOSTO
+            18 SETEMBRO
           </span>
           <span className="text-white/25 hidden sm:inline">·</span>
           <span className="text-white text-lg md:text-2xl font-semibold tracking-widest">
@@ -357,7 +357,7 @@ function Schedule() {
           className="text-[#EF4444] text-xs font-semibold tracking-[0.35em] mb-4 text-center"
           style={{ fontFamily: BODY }}
         >
-          21 AGOSTO 2026
+          18 SETEMBRO 2026
         </p>
         <h2
           className="text-5xl md:text-6xl font-black text-white text-center mb-16"
@@ -587,7 +587,7 @@ function Tickets() {
       note: "Vagas limitadas",
       price: "R$ 30",
       featured: false,
-      sold: true,
+      sold: false,
     },
     {
       batch: "2º LOTE",
@@ -797,7 +797,7 @@ function Venue() {
                 className="text-white/65 text-sm"
                 style={{ fontFamily: BODY }}
               >
-                Sexta-feira, 21 de agosto · Abertura às 19h
+                Sexta-feira, 18 de setembro · Abertura às 19h
               </span>
             </div>
             <div className="flex items-start gap-3">
@@ -1077,7 +1077,7 @@ function Footer() {
               className="text-white/35 text-sm"
               style={{ fontFamily: BODY }}
             >
-              21 Agosto · AMP213 · Olinda, PE
+              18 Setembro · AMP213 · Olinda, PE
             </p>
           </div>
           <div className="flex items-center gap-6">
@@ -1135,7 +1135,7 @@ function Footer() {
 function WhatsAppFab() {
   return (
     <a
-      href="https://wa.me/5581989713537?text=Oi!%20Quero%20saber%20mais%20sobre%20o%20DALE%20Nova%20Temporada"
+      href="https://wa.me/5581989713537?text=Oi!%20Quero%20saber%20mais%20sobre%20o%20DALE%20Edi%C3%A7%C3%A3o%20de%20Anivers%C3%A1rio"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-5 z-50 flex items-center gap-2 bg-[#25D366] text-white pl-3 pr-5 py-3 shadow-lg shadow-black/40 hover:scale-105 transition-transform rounded-full"

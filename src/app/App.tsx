@@ -122,9 +122,9 @@ function Hero() {
         </h1>
         <img
           src="/img/hero.jpg"
-          alt="DALE Edição de Aniversário - AMP 213 - Cartaz Oficial do Evento"
-          width={1200}
-          height={630}
+          alt="Baile de Aniversário DALE e AMP213 - Cartaz Oficial do Evento"
+          width={1600}
+          height={838}
           className="w-full max-w-3xl mx-auto h-auto rounded-2xl shadow-2xl shadow-red-950/80 border border-[#7A1522]"
         />
 
@@ -247,7 +247,7 @@ function Sobre() {
     {
       icon: <Zap className="w-5 h-5" />,
       title: "Shot Incluso",
-      desc: "Um drink de boas-vindas pra quem chega até 20h",
+      desc: "Um drink de boas-vindas pra quem chega até 21h",
     },
     {
       icon: <Leaf className="w-5 h-5" />,
@@ -326,8 +326,8 @@ function Schedule() {
   const items = [
     {
       time: "19h00",
-      title: "Abertura das Portas",
-      desc: "Entrada liberada. Primeiros a chegar ganham o shot incluso.",
+      title: "Abertura da Casa",
+      desc: "Portas abertas com som ambiente. Primeiros a chegar garantem o shot incluso.",
     },
     {
       time: "19h00 – 21h00",
@@ -335,19 +335,24 @@ function Schedule() {
       desc: "Resgate no balcão ao apresentar seu ingresso.",
     },
     {
-      time: "19h30 – 20h30",
-      title: "Aulão de Salsa & Bachata",
-      desc: "Com o Corpo de Baile. Aprenda os primeiros passos antes de entrar na pista.",
+      time: "20h00",
+      title: "DJ Incidental Assume a Pista",
+      desc: "Salsa, cumbia, reggaeton, bachata, lambada, forró e brega.",
     },
     {
-      time: "20h30+",
-      title: "Set do DJ Incidental",
-      desc: "15 anos de pista. Salsa, cumbia, reggaeton — e o que mais rolar.",
+      time: "Em seguida",
+      title: "Corpo de Baile Abre a Pista",
+      desc: "O casal oficial da festa puxa os primeiros movimentos e convida todo mundo a dançar.",
     },
     {
-      time: "22h00+",
-      title: "Pista Livre",
-      desc: "A noite é longa e a pista é sua. Dança até o fim.",
+      time: "Ao longo da noite",
+      title: "Show Los Guaracheros",
+      desc: "Banda ao vivo tocando no quintal e no salão.",
+    },
+    {
+      time: "01h00",
+      title: "Encerramento",
+      desc: "A noite é longa e a pista é sua até o fim.",
     },
   ];
   return (
@@ -413,6 +418,27 @@ function Lineup() {
           ATRAÇÕES
         </h2>
         <div className="grid md:grid-cols-2 gap-5">
+          {/* Los Guaracheros */}
+          <div className="relative overflow-hidden group bg-gradient-to-br from-[#7A1522] to-[#EF4444] md:col-span-2 p-10 flex flex-col items-center justify-center text-center min-h-[16rem]">
+            <span
+              className="text-[#F2CB53] text-xs font-bold tracking-[0.3em]"
+              style={{ fontFamily: BODY }}
+            >
+              SHOW AO VIVO
+            </span>
+            <h3
+              className="text-4xl md:text-5xl font-black text-white mt-2"
+              style={{ fontFamily: DISPLAY }}
+            >
+              LOS GUARACHEROS
+            </h3>
+            <p
+              className="text-white/70 text-sm mt-3 max-w-md"
+              style={{ fontFamily: BODY }}
+            >
+              Banda ao vivo tocando no quintal e no salão — o show que embala a Edição de Aniversário DALE e AMP213.
+            </p>
+          </div>
           {/* DJ Incidental */}
           <div className="relative overflow-hidden group bg-[#20080B]">
             <img
@@ -584,47 +610,47 @@ function Tickets() {
     {
       batch: "1º LOTE",
       name: "Abre Alas",
-      note: "Vagas limitadas",
+      note: "Ingresso individual",
       price: "R$ 30",
       featured: false,
       sold: false,
     },
     {
       batch: "2º LOTE",
-      name: "Ingresso Individual",
-      note: "",
+      name: "Dale Festa",
+      note: "Ingresso individual",
       price: "R$ 40",
       featured: false,
       sold: false,
     },
     {
-      batch: "DUPLA",
+      batch: "CASAL/DATE · 1º LOTE",
       name: "Casal / Date",
       note: "Entrada para 2 pessoas",
-      price: "R$ 60",
+      price: "R$ 50",
       featured: true,
       sold: false,
     },
     {
-      batch: "ESPECIAL",
-      name: "Mãe Solo",
-      note: "Homenagem às mães solo",
-      price: "R$ 30",
+      batch: "CASAL/DATE · 2º LOTE",
+      name: "Casal / Date",
+      note: "Entrada para 2 pessoas",
+      price: "R$ 60",
       featured: false,
       sold: false,
     },
     {
-      batch: "2 PESSOAS",
+      batch: "2 PESSOAS · 2º LOTE",
       name: "Mesa Bistrô (2 pessoas)",
-      note: "Ingressos inclusos + atendimento",
+      note: "Ingressos inclusos + mesa reservada",
       price: "R$ 100",
       featured: false,
       sold: false,
     },
     {
-      batch: "4 PESSOAS",
+      batch: "4 PESSOAS · 1º LOTE",
       name: "Mesa Bistrô (4 pessoas)",
-      note: "Ingressos inclusos + atendimento",
+      note: "Ingressos inclusos + mesa reservada",
       price: "R$ 180",
       featured: false,
       sold: false,
@@ -719,7 +745,7 @@ function Tickets() {
 
         <div className="flex flex-col gap-4 mt-6">
           <a
-            href="https://www.sympla.com.br/evento/dale-me-gusta-sexta-21-de-agosto-amp-213-olinda-rua-do-amparo-213/3537954"
+            href="https://www.sympla.com.br/evento/baile-de-aniversario-dale-e-amp213-sexta-18-de-setembro-olinda-rua-do-amparo-213/3559305"
             target="_blank"
             rel="noopener noreferrer"
             className="block text-center bg-[#2EC420] text-white px-8 py-4 text-sm font-black tracking-[0.15em] uppercase hover:brightness-110 transition-all shadow-lg shadow-[#2EC420]/30"
@@ -983,7 +1009,7 @@ function FAQ() {
   const faqs = [
     {
       q: "Preciso saber dançar para ir?",
-      a: "Não! A DALE é para todo mundo. O Corpo de Baile fará uma aula para iniciantes durante a festa — você vai sair sabendo dançar.",
+      a: "Não! A DALE é para todo mundo. O Corpo de Baile abre a pista puxando os primeiros movimentos assim que o DJ assume — é só entrar no clima.",
     },
     {
       q: "Como funciona o shot incluso?",

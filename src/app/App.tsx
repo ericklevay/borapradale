@@ -347,7 +347,7 @@ function Schedule() {
     {
       time: "Ao longo da noite",
       title: "Show Los Guaracheros",
-      desc: "Banda ao vivo tocando no quintal e no salão.",
+      desc: "Banda ao vivo tocando no quintal.",
     },
     {
       time: "01h00",
@@ -419,25 +419,36 @@ function Lineup() {
         </h2>
         <div className="grid md:grid-cols-2 gap-5">
           {/* Los Guaracheros */}
-          <div className="relative overflow-hidden group bg-gradient-to-br from-[#7A1522] to-[#EF4444] md:col-span-2 p-10 flex flex-col items-center justify-center text-center min-h-[16rem]">
-            <span
-              className="text-[#F2CB53] text-xs font-bold tracking-[0.3em]"
-              style={{ fontFamily: BODY }}
-            >
-              SHOW AO VIVO
-            </span>
-            <h3
-              className="text-4xl md:text-5xl font-black text-white mt-2"
-              style={{ fontFamily: DISPLAY }}
-            >
-              LOS GUARACHEROS
-            </h3>
-            <p
-              className="text-white/70 text-sm mt-3 max-w-md"
-              style={{ fontFamily: BODY }}
-            >
-              Banda ao vivo tocando no quintal e no salão — o show que embala a Edição de Aniversário DALE e AMP213.
-            </p>
+          <div className="relative overflow-hidden group bg-[#20080B] md:col-span-2">
+            <img
+              src="/img/los-guaracheros.png"
+              alt="Banda Los Guaracheros se apresentando ao vivo"
+              width={733}
+              height={392}
+              loading="lazy"
+              className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-600"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0F0406] via-[#0F0406]/30 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-7">
+              <span
+                className="text-[#F2CB53] text-xs font-bold tracking-[0.3em]"
+                style={{ fontFamily: BODY }}
+              >
+                SHOW AO VIVO
+              </span>
+              <h3
+                className="text-4xl font-black text-white mt-1"
+                style={{ fontFamily: DISPLAY }}
+              >
+                LOS GUARACHEROS
+              </h3>
+              <p
+                className="text-white/55 text-sm mt-2"
+                style={{ fontFamily: BODY }}
+              >
+                Banda ao vivo tocando no quintal — o show que embala a Edição de Aniversário DALE e AMP213.
+              </p>
+            </div>
           </div>
           {/* DJ Incidental */}
           <div className="relative overflow-hidden group bg-[#20080B]">

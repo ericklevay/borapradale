@@ -128,6 +128,19 @@ function Hero() {
           className="w-full max-w-3xl mx-auto h-auto rounded-2xl shadow-2xl shadow-red-950/80 border border-[#7A1522]"
         />
 
+        <p
+          className="text-[#EF4444] text-xs font-semibold tracking-[0.35em] mt-4"
+          style={{ fontFamily: BODY }}
+        >
+          BAILE DE ANIVERSÁRIO · DALE + AMP213
+        </p>
+        <p
+          className="text-white/60 text-sm md:text-base mt-2 max-w-xl mx-auto"
+          style={{ fontFamily: BODY }}
+        >
+          Uma noite especial para celebrar nossa história juntas.
+        </p>
+
         {/* Date line */}
         <div
           className="flex flex-wrap items-center justify-center gap-2 md:gap-5 mt-4 mb-10"
@@ -174,7 +187,7 @@ function Hero() {
             className="bg-[#F2CB53] text-[#0C0D1E] px-10 py-4 text-base font-black tracking-[0.2em] hover:bg-white transition-colors w-full sm:w-auto text-center"
             style={{ fontFamily: DISPLAY }}
           >
-            COMPRAR INGRESSO
+            GARANTA SEU INGRESSO
           </a>
           <a
             href="#sobre"
@@ -281,17 +294,30 @@ function Sobre() {
             className="text-white/55 leading-relaxed text-base mb-4"
             style={{ fontFamily: BODY }}
           >
-            DALE é uma festa de música da América Latina em Olinda que reúne salsa, cumbia,
-            reggaeton e muito mais num único espaço vibrante. No AMP213, você
-            encontra pista de dança, aula para iniciantes, gastronomia e um
-            ambiente acolhedor — pra ir sozinho, em casal ou em grupo.
+            A DALE é uma festa de música da América Latina em Olinda. Salsa,
+            cumbia, reggaeton, forró, lambada, technobrega e aquele breguinha
+            esfregante que ninguém resiste. Tudo isso num espaço vibrante, com
+            a cara de Olinda e uma pista feita para dançar.
+          </p>
+          <p
+            className="text-white/55 leading-relaxed text-base mb-4"
+            style={{ fontFamily: BODY }}
+          >
+            <span className="text-white/80">Nunca dançou? Vem mesmo assim.</span>{" "}
+            NA DALE, ninguém precisa chegar sabendo. Nosso Corpo de Baile está
+            na pista para ajudar nos primeiros passos, aproximar as pessoas e
+            deixar todo mundo mais à vontade. Aqui todo mundo aprende. Todo
+            mundo dança.
           </p>
           <p
             className="text-white/55 leading-relaxed text-base"
             style={{ fontFamily: BODY }}
           >
-            Venha sem medo.{" "}
-            <span className="text-white/80">Aqui todo mundo aprende, todo mundo dança.</span>
+            <span className="text-white/80">Convite é bom. Insistência não.</span>{" "}
+            NA DALE, a pista é lugar de encontro, dança e liberdade. Pode
+            convidar pra dançar, pode chegar junto com respeito — mas um "não"
+            é sempre um "não". A gente gosta de uma pista quente, nunca de
+            insistência.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-3">
@@ -419,22 +445,21 @@ function Lineup() {
         </h2>
         <div className="grid md:grid-cols-2 gap-5">
           {/* Los Guaracheros */}
-          <div className="relative overflow-hidden group bg-[#20080B] md:col-span-2">
+          <div className="overflow-hidden group bg-[#20080B] md:col-span-2">
             <img
               src="/img/los-guaracheros.png"
               alt="Banda Los Guaracheros se apresentando ao vivo"
               width={733}
               height={392}
               loading="lazy"
-              className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-600"
+              className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-600"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0F0406] via-[#0F0406]/30 to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-7">
+            <div className="p-7">
               <span
                 className="text-[#F2CB53] text-xs font-bold tracking-[0.3em]"
                 style={{ fontFamily: BODY }}
               >
-                SHOW AO VIVO
+                SHOW AO VIVO · NO QUINTAL
               </span>
               <h3
                 className="text-4xl font-black text-white mt-1"
@@ -443,10 +468,23 @@ function Lineup() {
                 LOS GUARACHEROS
               </h3>
               <p
-                className="text-white/55 text-sm mt-2"
+                className="text-white/55 text-sm mt-3 leading-relaxed"
                 style={{ fontFamily: BODY }}
               >
-                Banda ao vivo tocando no quintal — o show que embala a Edição de Aniversário DALE e AMP213.
+                Uma viagem dançante pela música tropical latino-americana.
+                Formado pelo argentino Federico Diorio na voz e violão, pelo
+                austríaco Stefan Matl no acordeon e por Caito na percussão, o
+                grupo recebe ainda a participação especial de Diego Drão nos
+                teclados e percussão.
+              </p>
+              <p
+                className="text-white/55 text-sm mt-2 leading-relaxed"
+                style={{ fontFamily: BODY }}
+              >
+                O repertório passa pelo son cubano, cumbias colombianas,
+                ritmos peruanos, boleros e salsa, criando aquele clima de
+                fiesta que combina perfeitamente com a pista da DALE. Música
+                envolvente, latina e feita para dançar.
               </p>
             </div>
           </div>
@@ -578,7 +616,7 @@ function VideoSection() {
             >
               É assim que a{" "}
               <span className="text-[#F2CB53]">pista vibra</span>{" "}
-              no DALE
+              NA DALE
             </h3>
             <p
               className="text-white/55 leading-relaxed mb-8 text-base"
@@ -765,7 +803,7 @@ function Tickets() {
             Comprar no Sympla
           </a>
           <a
-            href="https://wa.me/5581989713537?text=Oi!%20Quero%20comprar%20ingresso%20no%20PIX%20sem%20taxas%20para%20o%20DALE"
+            href="https://wa.me/5581989713537?text=Oi!%20Quero%20comprar%20ingresso%20no%20PIX%20sem%20taxas%20para%20a%20DALE"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 border-2 border-[#F2CB53] text-[#F2CB53] px-8 py-4 text-sm font-black tracking-[0.15em] uppercase hover:bg-[#F2CB53] hover:text-[#0C0D1E] transition-colors"
@@ -815,8 +853,12 @@ function Venue() {
             className="text-white/55 leading-relaxed mb-8"
             style={{ fontFamily: BODY }}
           >
-            Espaço cultural e gastronômico em Olinda, PE. Um lugar que respira
-            arte, comida boa e noites que ficam na memória.
+            <span className="text-white/80">A casa da DALE.</span>{" "}
+            A DALE acontece na AMP 213, em plena Rua do Amparo, no coração de
+            Olinda. Uma pista de dança gostosa, quintal pra lá de
+            instagramável, gastronomia marcante, drinks autorais e uma equipe
+            que sabe receber. Sozinha, acompanhada, em casal ou em grupo, a
+            ideia é uma só: você chegar e se sentir em casa.
           </p>
           <div className="space-y-4">
             <div className="flex items-start gap-3">
@@ -1172,7 +1214,7 @@ function Footer() {
 function WhatsAppFab() {
   return (
     <a
-      href="https://wa.me/5581989713537?text=Oi!%20Quero%20saber%20mais%20sobre%20o%20DALE%20Edi%C3%A7%C3%A3o%20de%20Anivers%C3%A1rio"
+      href="https://wa.me/5581989713537?text=Oi!%20Quero%20saber%20mais%20sobre%20a%20DALE%20Edi%C3%A7%C3%A3o%20de%20Anivers%C3%A1rio"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-5 z-50 flex items-center gap-2 bg-[#25D366] text-white pl-3 pr-5 py-3 shadow-lg shadow-black/40 hover:scale-105 transition-transform rounded-full"

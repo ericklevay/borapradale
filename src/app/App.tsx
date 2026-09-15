@@ -662,7 +662,7 @@ function Tickets() {
       note: "Ingresso individual",
       price: "R$ 30",
       featured: false,
-      sold: false,
+      sold: true,
     },
     {
       batch: "2º LOTE",
